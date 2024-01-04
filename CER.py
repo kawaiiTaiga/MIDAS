@@ -42,11 +42,11 @@ class GenerationModel:
         instruction = f"[INST]This is part of dataset for intent classfication for banking data.\
             {class_a} : {data_a}\
             {class_b} : {data_b}\
-            Tell me the main difference between {class_a} and {class_b} in one sentence.[/INST] The main difference between {class_a} and {class_b} is"
+            Tell me the main difference between {class_a} and {class_b} in one sentence.[/INST] The main difference"
 
         input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
         outputs = self.model.generate(input_ids, )
-        generated_text = self.tokenizer.decode(outputs[0], repetition_penalty = 1.15)
+        generated_text = self.tokenizer.decode(outputs[0])
         COT = generated_text.split('[/INST]')[1]
         return COT
 def main():
@@ -66,20 +66,23 @@ def main():
 
     results = []
     
-    if rank == 0:
-        initialize_progress_data(world_size)
+    sub_bar = tqdm(total=0,
+                   desc=f"gpu {rank}",
+                   bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]",
+                   position=rank)
+
         # 주 프로세스에서 모니터링 스레드 시작
-        monitor_progress_thread(world_size, parts)
-
-
-
+    sub_bar.total = len(parts[rank])
+    
     for idx, datas in enumerate(parts):
         if idx == rank:
             for i, data in enumerate(datas):
                 cot_result = model.generate(data)
                 results.append({str(data): cot_result})
-                update_progress(rank, i, len(datas))
-                 
+                sub_bar.n = i
+                sub_bar.refresh()
+    
+
     with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{rank}.json', 'w') as f:
         json.dump(results, f,indent=4)
     

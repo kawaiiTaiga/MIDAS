@@ -15,11 +15,11 @@ import os
 from utils import * 
 import re
 import random
+import datetime
+
+
 with open('config.json', 'r') as f:
     configs = json.load(f)
-
-
-
 
 
 class GenerationModel:
@@ -36,41 +36,53 @@ class GenerationModel:
         self.SimilarityChecker = SimilarityChecker(self.original_data,self.device)
         self.similarity_ranking = self.SimilarityChecker.find_top_k_similar_classes(k=configs['CEA']['pair_count'])
         
-    def generation(self,target_class,ambigious_class):
-        
+    def generation(self,target_class,ambigious_class,total_length,idx,subprogress_bars,i,t):
+        subprogress_postfix = f'generation:{idx}/{total_length}||{i}/{t}'
+        subprogress_bars.set_postfix_str(subprogress_postfix)
         combined_result = []
         for i in range(configs['CEA']['generation_count']):
-   
             
-            data_target = '","'.join(random.sample(self.original_data[target_class],configs['CEA']['sample_count']))
-            data_ambigious = '","'.join(random.sample(self.original_data[ambigious_class],configs['CEA']['sample_count']))
+            sampled_data = random.sample(self.original_data[target_class], configs['CEA']['sample_count'])
+            data_target = "\n".join(f"{idx + 1}. {text}" for idx, text in enumerate(sampled_data))
+            
+            sampled_ambigious = random.sample(self.original_data[ambigious_class], configs['CEA']['sample_count'])
+            data_ambigious = "\n".join(f"{idx + 1}. {text}" for idx, text in enumerate(sampled_ambigious))
 
             Key = tuple(sorted([target_class,ambigious_class]))
             CER = self.CER[Key]
 
-            instruction = f"""[INST]I have an intent classification dataset for banking tasks with two classes, {target_class} and {ambigious_class}.\
-{target_class} : "{data_target}"\
-{ambigious_class} : "{data_ambigious}"\
-key differentiator : {CER}\
-key differentiator outlining the primary distinctions between {target_class} and {ambigious_class}.
-I now require 10 new text data examples specifically for class {target_class}.\
-These examples should be deliberately crafted to ensure that, when trained in a classification model, class {target_class} is distinctly identifiable from class {ambigious_class}.\
-Could you generate these examples for me? [\INST] Examples : 1."""
+            instruction = f"""[INST]{target_class} : {data_target}
+{ambigious_class} : {data_ambigious}
+Distinctive Text : {CER}
+This is part of intent classification dataset about banking. Based on the provided texts for each class and the distinctive text highlighting their differences, generate five new texts that emphasize the unique characteristics of class {target_class}. This new texts should help a classification model better distinguish between the two classes.
+After making the new texts, number them sequentially and conclude the list with [END].[/INST]
+New text for {target_class}: 1."""
 
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
-            outputs = self.model.generate(input_ids, )
-            generated_text = self.tokenizer.decode(outputs[0], repetition_penalty = configs['CEA']['generation_repetition_penalty'])
-            result = generated_text.split('Examples : ')[1]
+            outputs = self.model.generate(input_ids, repetition_penalty = configs['CEA']['generation_repetition_penalty'] )
+            generated_text = self.tokenizer.decode(outputs[0])
+            result = generated_text.split(f'New text for {target_class}:')[1]
+            if '[END]' in result:
+                result = result.split('[END]')[0]
             candidiate_texts = re.split(r'\d+\.', result)
             candidiate_texts = [item.strip() for item in candidiate_texts if item.strip()]
             combined_result.extend(candidiate_texts)
             
+            
+            subprogress_bars.total = configs['CEA']['generation_count']
+            subprogress_bars.n = i
+            subprogress_bars.refresh()
+
         return combined_result
     
-    def verification(self,candidiate_texts):
+    def verification(self,candidiate_texts,total_length,idx,subprogress_bars,i,t):
         combined_result = []
-        for text in candidiate_texts:
-
+        
+        subprogress_postfix = f'verification:{idx}/{total_length}||{i}/{t}'
+        subprogress_bars.set_postfix_str(subprogress_postfix)
+        
+        for i,text in enumerate(candidiate_texts):
+            
             similar_texts = self.SimilarityChecker.find_top_k_similar_texts(text,k=configs['CEA']['verification_count'])
      
             instruction = ""
@@ -79,90 +91,116 @@ Could you generate these examples for me? [\INST] Examples : 1."""
             
             instruction += f"text : {text} class :"
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
-            outputs = self.model.generate(input_ids,max_new_tokens=30)
+            
+            outputs = self.model.generate(input_ids,max_new_tokens=15)
+            
             generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             generated_text = generated_text.replace(instruction, "")
             generated_text = generated_text.split('\n')[0].strip()
             verification_result = self.SimilarityChecker.find_most_similar_class_by_name(generated_text)
+            
             combined_result.append(verification_result)
+            
+            
+            subprogress_bars.total = len(candidiate_texts)
+            subprogress_bars.n = i 
+            subprogress_bars.refresh()
             
         return combined_result
     
-    def mutation(self,candidate_texts,verification_result,target_class):
+    def mutation(self,candidate_texts,verification_result,target_class,total_length,idx,subprogress_bars,i,t):
         combined_result = []
+        ct = 0
+        
+        subprogress_postfix = f'mutation:{idx}/{total_length}||{i}/{t}'
+        subprogress_bars.set_postfix_str(subprogress_postfix)
+        
         for text,pred in zip(candidate_texts,verification_result):
+            ct +=1
             if pred == target_class:
                 combined_result.append(text)
             else:
                 Key = tuple(sorted([target_class,pred]))
                 CER = self.CER[Key]
 
-                data_target = '","'.join(self.original_data[target_class])
+                data_target = "\n".join(f"{idx + 1}. {text}" for idx, text in enumerate(self.original_data[target_class]))
 
-                instruction = f"""[INST]Input text: {text}\
-This sentence currently belongs to the '{pred}'. Transform this sentence into one that would belong to the '{target_class}', taking into consideration the provided key differentiator and sample texts of {target_class}.\
-Key differentiator : {CER}\
-Sample texts of {target_class}:{data_target}[\INTS] Transformed text:"""
+                instruction = f'''[INST]{target_class} :{self.original_data[target_class]}
+Distinctive Text : {CER}.   
+This is query text which is belong to class {pred}. 
+Query text : '{text}'
+Mutate this Query text to proper for class {target_class}.
+[/INST]Changed text :"'''
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
-                outputs = self.model.generate(input_ids, )
-                generated_text = self.tokenizer.decode(outputs[0], repetition_penalty = configs['CEA']['mutation_repetition_penalty'])
-                generated_text = generated_text.split('Transformed text:')[1]
+                outputs = self.model.generate(input_ids, max_new_tokens=100, repetition_penalty = configs['CEA']['mutation_repetition_penalty'])
+                generated_text = self.tokenizer.decode(outputs[0])
+                generated_text = generated_text.split(f'Changed text :')[1]
+                generated_text = generated_text.split('"')[1].strip()
                 combined_result.append(generated_text)
-                
+            
+            subprogress_bars.total = len(candidate_texts)
+            subprogress_bars.n = ct
+            subprogress_bars.refresh()
 
         return combined_result
 
 
 
-    def CEA(self,data):
-       
+    def CEA(self,data,i,t):
         ambigious_classes = self.similarity_ranking[data]
         combined_data = []
+        
+        
+        # 서브프로세스 진행 막대 생성 (초기 total 값은 나중에 설정)
+        sub_bar = tqdm(total=0,
+                   desc=f"gpu {rank}",
+                   bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining},{postfix}]",
+                   position=rank)
+        subprogress_bars = sub_bar
+        
+        
         for idx,ambigious_class in enumerate(ambigious_classes):
 
-            
+            total_length = len(ambigious_classes)
 
-            update_sub_progress(rank, idx, len(ambigious_classes),'generation')
-            candidate_texts = self.generation(data,ambigious_class[0])
             
-            update_sub_progress(rank, idx, len(ambigious_classes),'verification')
-            verification_result = self.verification(candidate_texts)
+            candidate_texts = self.generation(data,ambigious_class[0],total_length,idx,subprogress_bars,i,t)
             
-            final_result = self.mutation(candidate_texts,verification_result,data)
-            update_sub_progress(rank, idx, len(ambigious_classes),'verification')
-            final_result = [{'class' : data, 'text' : text, 'ambig' : ambigious_class, 'pred' : pred } for text,pred in zip(final_result,verification_result)]
+            
+            verification_result = self.verification(candidate_texts,total_length,idx,subprogress_bars,i,t)
+            
+            final_result = self.mutation(candidate_texts,verification_result,data,total_length,idx,subprogress_bars,i,t)
+            
+            final_result = [{'class' : data, 'text' : text, 'ambig' : ambigious_class[0], 'pred' : pred } for text,pred in zip(final_result,verification_result)]
             combined_data.extend(final_result)
             
         #save as json file
-        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/{data}_{configs["test_name"]}.json', 'w') as f:
+        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/CEA/3/{data}_{configs["test_name"]}.json', 'w') as f:
             json.dump(combined_data, f,indent=4)
         return final_result
 def main():
     
-
+   
     
     model = GenerationModel("meta-llama/Llama-2-13b-chat-hf", rank)
     df = pd.read_csv(f'/data/2_data_server/nlp-04/lost_technology/original_data/{configs["datasets"]}/train_{configs["shot"]}.csv')
     result = df.groupby('category')['text'].apply(list).to_dict()
 
     classes = list(result.keys())
-
+    
+    #classes = np.array_split(classes,3)
     parts = np.array_split(classes, world_size)
 
     results = []
     
-    if rank == 0:
-        initialize_progress_data(world_size)
-        # 주 프로세스에서 모니터링 스레드 시작
-        monitor_progress_thread(world_size, parts,True)
+
 
 
 
     for idx, datas in enumerate(parts):
         if idx == rank:
             for i, data in enumerate(datas):
-                update_progress(rank, i, len(datas))
-                CEA_RESULT = model.CEA(data)
+                CEA_RESULT = model.CEA(data,i,len(datas))
                 #results.extend({str(data): cot_result})
 
                 
@@ -175,16 +213,11 @@ def main():
 
 
 
-    combined_data = []
-    if rank == 0:
-        for i in range(world_size):
-            with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{i}.json', 'r') as f:
-                data = json.load(f)
-                combined_data.extend(data)
-        with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/combined.json', 'w') as f:
-            json.dump(combined_data, f,indent=4)
+    
 if __name__ == '__main__':
-    dist.init_process_group(backend='nccl')
+    dist.init_process_group(backend='nccl',timeout=datetime.timedelta(hours=5))
     rank = dist.get_rank()
     world_size = dist.get_world_size()
+     # Manager 객체 생성
+    
     main()

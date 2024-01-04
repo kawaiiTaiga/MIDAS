@@ -1,0 +1,129 @@
+/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pyarrow/pandas_compat.py:373: FutureWarning: is_sparse is deprecated and will be removed in a future version. Check `isinstance(dtype, pd.SparseDtype)` instead.
+  if _pandas_api.is_sparse(col):
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-large and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+
+
+Map:  80%|███████████████████████████████████████▉          | 35000/43780 [00:04<00:01, 6992.40 examples/s]
+  0%|                                                                             | 0/1029 [00:00<?, ?it/s]/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  3%|█▉                                                                  | 30/1029 [00:57<25:08,  1.51s/it]
+
+
+
+
+
+
+
+ 96%|███████████████████████████████████████████████████████████████████▏  | 24/25 [00:13<00:00,  1.76it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  6%|███▉                                                                | 60/1029 [01:57<24:27,  1.51s/it]
+
+
+
+
+
+
+ 92%|████████████████████████████████████████████████████████████████▍     | 23/25 [00:13<00:01,  1.68it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  8%|█████▍                                                              | 82/1029 [02:46<23:53,  1.51s/it]Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 69, in <module>
+    report_to="wandb",
+    ^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 1555, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 1837, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 2682, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 2707, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 184, in forward
+    replicas = self.replicate(self.module, self.device_ids[:len(inputs)])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 189, in replicate
+    return replicate(module, device_ids, not torch.is_grad_enabled())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/parallel/replicate.py", line 134, in replicate
+    replica = module._replicate_for_data_parallel()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/modules/module.py", line 2525, in _replicate_for_data_parallel
+    replica.__dict__ = self.__dict__.copy()
+    ^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1707, in __setattr__
+    if isinstance(value, Parameter):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/torch/nn/parameter.py", line 9, in __instancecheck__
+    return super().__instancecheck__(instance) or (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

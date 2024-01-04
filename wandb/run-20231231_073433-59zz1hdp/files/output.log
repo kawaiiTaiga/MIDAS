@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 14, in <module>
+    train_data = pd.read_json("/data/2_data_server/nlp-04/lost_technology/data/banking/5shot/CEA/combined.json")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/fuck/lib/python3.11/site-packages/pandas/io/json/_json.py", line 780, in read_json
+    json_reader = JsonReader(
+                  ^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/fuck/lib/python3.11/site-packages/pandas/io/json/_json.py", line 893, in __init__
+    data = self._get_data_from_filepath(filepath_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/fuck/lib/python3.11/site-packages/pandas/io/json/_json.py", line 949, in _get_data_from_filepath
+    raise FileNotFoundError(f"File {filepath_or_buffer} does not exist")
+FileNotFoundError: File /data/2_data_server/nlp-04/lost_technology/data/banking/5shot/CEA/combined.json does not exist

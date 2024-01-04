@@ -1,0 +1,1113 @@
+2023-12-30 12:51:26,210 INFO    StreamThr :1569808 [internal.py:wandb_internal():86] W&B internal server running at pid: 1569808, started at: 2023-12-30 12:51:26.209069
+2023-12-30 12:51:26,212 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status
+2023-12-30 12:51:26,216 INFO    WriterThread:1569808 [datastore.py:open_for_write():85] open: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/run-558sv03w.wandb
+2023-12-30 12:51:26,218 DEBUG   SenderThread:1569808 [sender.py:send():380] send: header
+2023-12-30 12:51:26,220 DEBUG   SenderThread:1569808 [sender.py:send():380] send: run
+2023-12-30 12:51:26,817 INFO    SenderThread:1569808 [dir_watcher.py:__init__():211] watching files in: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files
+2023-12-30 12:51:26,818 INFO    SenderThread:1569808 [sender.py:_start_run_threads():1124] run started: 558sv03w with start time 1703908286.209185
+2023-12-30 12:51:26,825 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: check_version
+2023-12-30 12:51:26,827 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: check_version
+2023-12-30 12:51:26,894 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: run_start
+2023-12-30 12:51:26,918 DEBUG   HandlerThread:1569808 [system_info.py:__init__():32] System info init
+2023-12-30 12:51:26,918 DEBUG   HandlerThread:1569808 [system_info.py:__init__():47] System info init done
+2023-12-30 12:51:26,918 INFO    HandlerThread:1569808 [system_monitor.py:start():194] Starting system monitor
+2023-12-30 12:51:26,920 INFO    SystemMonitor:1569808 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-12-30 12:51:26,920 INFO    HandlerThread:1569808 [system_monitor.py:probe():214] Collecting system info
+2023-12-30 12:51:26,921 INFO    SystemMonitor:1569808 [interfaces.py:start():190] Started cpu monitoring
+2023-12-30 12:51:26,923 INFO    SystemMonitor:1569808 [interfaces.py:start():190] Started disk monitoring
+2023-12-30 12:51:26,924 INFO    SystemMonitor:1569808 [interfaces.py:start():190] Started gpu monitoring
+2023-12-30 12:51:26,925 INFO    SystemMonitor:1569808 [interfaces.py:start():190] Started memory monitoring
+2023-12-30 12:51:26,925 INFO    SystemMonitor:1569808 [interfaces.py:start():190] Started network monitoring
+2023-12-30 12:51:26,977 DEBUG   HandlerThread:1569808 [system_info.py:probe():196] Probing system
+2023-12-30 12:51:26,981 DEBUG   HandlerThread:1569808 [system_info.py:_probe_git():181] Probing git
+2023-12-30 12:51:26,988 DEBUG   HandlerThread:1569808 [system_info.py:_probe_git():189] Probing git done
+2023-12-30 12:51:26,988 DEBUG   HandlerThread:1569808 [system_info.py:probe():244] Probing system done
+2023-12-30 12:51:26,988 DEBUG   HandlerThread:1569808 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.31', 'python': '3.11.5', 'heartbeatAt': '2023-12-30T03:51:26.977795', 'startedAt': '2023-12-30T03:51:26.168972', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data/2_data_server/nlp-04/lost_technology/test.py', 'codePathLocal': 'test.py', 'codePath': 'test.py', 'git': {'remote': 'https://github.com/kawaiiTaiga/MIDAS.git', 'commit': '11bb36a0dcc850a77235a71212352ee929d8ffdf'}, 'email': None, 'root': '/data/2_data_server/nlp-04/lost_technology', 'host': 'DICE-59', 'username': 'nlp-04', 'executable': '/home/nlp-04/anaconda3/envs/test/bin/python', 'cpu_count': 48, 'cpu_count_logical': 48, 'cpu_freq': {'current': 1.5500833333333333, 'min': 1500.0, 'max': 2650.0}, 'cpu_freq_per_core': [{'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 2.0, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.559, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}, {'current': 1.5, 'min': 1500.0, 'max': 2650.0}], 'disk': {'/': {'total': 1758.8579597473145, 'used': 471.51398849487305}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.73923110961914}}
+2023-12-30 12:51:26,988 INFO    HandlerThread:1569808 [system_monitor.py:probe():224] Finished collecting system info
+2023-12-30 12:51:26,989 INFO    HandlerThread:1569808 [system_monitor.py:probe():227] Publishing system info
+2023-12-30 12:51:26,989 DEBUG   HandlerThread:1569808 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-12-30 12:51:26,991 DEBUG   HandlerThread:1569808 [system_info.py:_save_pip():68] Saving pip packages done
+2023-12-30 12:51:26,991 DEBUG   HandlerThread:1569808 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-12-30 12:51:27,820 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_created():271] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/requirements.txt
+2023-12-30 12:51:27,821 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_created():271] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/conda-environment.yaml
+2023-12-30 12:51:29,005 DEBUG   HandlerThread:1569808 [system_info.py:_save_conda():87] Saving conda packages done
+2023-12-30 12:51:29,009 INFO    HandlerThread:1569808 [system_monitor.py:probe():229] Finished publishing system info
+2023-12-30 12:51:29,011 DEBUG   SenderThread:1569808 [sender.py:send():380] send: files
+2023-12-30 12:51:29,011 INFO    SenderThread:1569808 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-12-30 12:51:29,015 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:51:29,015 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:51:29,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:51:29,398 DEBUG   SenderThread:1569808 [sender.py:send():380] send: telemetry
+2023-12-30 12:51:29,823 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/conda-environment.yaml
+2023-12-30 12:51:29,824 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_created():271] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:29,834 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_created():271] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-metadata.json
+2023-12-30 12:51:29,847 INFO    wandb-upload_0:1569808 [upload_job.py:push():131] Uploaded file /tmp/tmpl6p68ctpwandb/qy5jemcl-wandb-metadata.json
+2023-12-30 12:51:31,407 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:31,826 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:33,828 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:35,830 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:36,466 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:37,832 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:39,835 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:40,898 DEBUG   SenderThread:1569808 [sender.py:send():380] send: config
+2023-12-30 12:51:40,899 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 12:51:40,900 DEBUG   SenderThread:1569808 [sender.py:send():380] send: telemetry
+2023-12-30 12:51:40,900 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 12:51:40,900 WARNING SenderThread:1569808 [sender.py:send_metric():1331] Seen metric with glob (shouldn't happen)
+2023-12-30 12:51:41,837 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:41,901 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:44,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:51:44,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:51:44,017 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:51:47,297 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:52,298 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:55,853 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:57,746 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:51:57,854 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:51:58,856 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/config.yaml
+2023-12-30 12:51:59,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:51:59,017 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:51:59,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:51:59,856 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:01,858 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:03,784 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:03,860 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:05,861 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:07,863 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:09,752 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:09,865 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:11,866 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:13,869 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:14,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:52:14,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:52:14,016 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:52:14,757 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:15,870 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:17,872 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:19,874 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:20,271 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:21,876 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:23,877 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:25,337 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:25,879 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:26,926 DEBUG   SystemMonitor:1569808 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-12-30 12:52:26,928 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:52:27,881 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:29,016 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:52:29,017 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:52:29,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:52:29,883 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:30,816 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:31,884 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:33,886 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:35,888 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:35,979 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:37,890 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:39,891 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:41,472 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:41,893 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:43,895 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:44,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:52:44,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:52:44,017 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:52:45,896 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:46,553 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:47,898 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:49,899 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:51,901 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:52,076 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:53,902 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:55,903 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:56,941 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:52:57,905 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:52:58,064 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:52:59,018 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:52:59,018 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:52:59,018 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:52:59,907 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:01,908 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:03,170 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:03,910 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:05,911 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:07,913 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:08,710 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:09,915 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:11,917 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:13,762 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:13,918 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:14,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:53:14,017 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:53:14,017 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:53:15,920 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:17,921 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:19,278 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:19,923 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:21,925 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:23,927 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:24,340 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:25,929 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:26,933 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:53:27,931 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:29,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:53:29,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:53:29,188 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:53:29,486 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:29,933 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:31,934 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:33,936 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:34,901 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:35,937 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:37,940 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:39,942 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:40,436 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:41,943 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:43,945 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:44,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:53:44,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:53:44,177 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:53:45,438 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:45,946 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:47,948 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:49,950 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:51,149 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:51,952 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:53,953 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:55,955 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:56,216 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:53:56,935 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:53:57,957 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:53:59,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:53:59,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:53:59,187 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:53:59,959 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:01,763 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:01,960 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:03,963 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:05,964 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:07,755 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:07,966 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:09,967 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:11,969 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:12,853 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:13,971 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:14,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:54:14,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:54:14,179 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:54:15,972 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:17,974 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:18,335 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:19,975 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:21,977 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:23,384 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:23,979 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:25,981 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:26,950 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:54:27,983 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:29,002 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:29,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:54:29,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:54:29,179 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:54:29,984 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:31,986 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:33,987 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:34,073 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:35,989 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:37,991 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:39,613 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:39,992 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:41,994 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:43,995 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:44,177 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:54:44,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:54:44,180 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:54:45,594 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:45,997 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:47,999 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:50,000 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:50,648 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:52,002 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:54,003 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:56,005 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:56,218 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:54:56,937 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:54:58,007 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:54:59,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:54:59,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:54:59,178 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:55:00,008 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:01,236 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:02,010 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:04,012 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:06,013 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:06,798 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:08,015 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:10,016 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:11,872 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:12,018 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:14,020 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:14,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:55:14,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:55:14,180 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:55:16,022 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:17,443 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:18,023 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:20,025 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:22,026 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:22,467 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:24,028 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:26,029 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:26,938 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:55:28,031 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:28,050 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:29,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:55:29,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:55:29,187 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:55:30,032 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:32,034 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:33,108 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:34,035 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:36,037 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:38,038 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:38,692 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:40,040 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:42,042 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:43,732 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:44,043 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:44,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:55:44,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:55:44,179 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:55:46,045 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:48,046 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:49,223 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:50,048 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:52,050 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:54,052 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:54,263 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:55:56,053 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:56,947 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:55:58,055 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:55:59,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:55:59,178 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:55:59,178 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:55:59,491 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:00,056 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:02,058 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:04,060 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:04,922 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:06,062 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:08,062 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:10,064 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:10,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:12,066 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:14,067 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:14,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:56:14,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:56:14,180 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:56:15,502 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:16,069 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:18,071 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:20,072 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:21,058 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:22,074 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:24,077 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:26,079 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:26,139 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:26,942 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:56:28,080 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:29,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:56:29,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:56:29,180 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:56:30,082 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:31,650 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:32,083 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:34,085 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:36,087 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:36,678 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:38,088 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:40,090 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:42,092 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:42,210 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:44,093 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:44,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:56:44,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:56:44,181 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:56:46,094 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:47,247 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:48,096 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:50,098 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:52,099 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:52,860 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:54,101 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:56,103 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:56,943 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:56:57,872 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:56:58,104 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:56:59,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:56:59,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:56:59,186 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:57:00,106 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:02,108 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:03,398 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:04,110 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:06,112 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:08,113 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:08,441 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:10,115 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:12,117 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:13,959 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:14,119 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:14,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:57:14,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:57:14,182 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:57:16,120 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:18,122 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:19,047 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:20,124 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:22,125 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:24,127 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:24,596 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:26,129 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:26,955 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:57:28,131 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:29,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:57:29,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:57:29,189 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:57:30,132 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:30,594 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:32,134 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:34,136 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:35,654 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:36,138 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:38,140 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:40,141 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:41,217 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:42,143 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:44,145 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:44,179 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:57:44,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:57:44,182 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:57:46,147 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:46,281 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:48,149 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:50,151 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:51,881 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:52,152 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:54,154 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:56,156 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:56,947 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:57:56,948 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:57:58,157 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:57:59,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:57:59,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:57:59,180 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:58:00,159 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:02,160 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:02,439 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:04,162 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:06,164 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:07,475 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:08,166 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:10,167 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:12,169 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:12,974 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:14,171 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:14,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:58:14,181 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:58:14,182 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:58:16,172 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:18,024 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:18,174 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:20,175 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:22,177 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:23,592 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:24,180 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:26,183 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:26,949 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:58:28,185 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:28,706 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:29,180 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:58:29,181 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:58:29,181 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:58:30,187 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:32,188 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:34,191 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:34,193 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:36,192 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:38,194 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:39,238 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:40,195 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:42,197 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:44,183 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:58:44,183 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:58:44,198 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:44,226 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:58:44,455 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:46,200 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:48,202 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:49,905 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:50,203 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:52,205 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:54,207 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:55,464 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:58:56,208 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:56,963 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:58:58,210 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:58:59,182 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:58:59,182 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:58:59,183 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:59:00,211 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:00,521 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:02,213 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:04,215 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:06,013 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:06,217 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:08,218 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:10,219 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:11,062 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:12,221 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:14,222 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:14,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:59:14,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:59:14,363 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:59:16,224 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:16,614 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:18,226 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:20,227 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:21,658 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:22,229 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:24,231 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:26,233 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:26,952 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:59:26,953 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:28,234 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:29,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:59:29,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:59:29,367 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:59:30,236 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:32,237 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:32,244 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:34,239 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:36,241 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:37,849 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:38,243 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:40,244 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:42,245 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:42,898 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:44,247 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:44,342 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:59:44,343 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:59:44,359 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 12:59:46,247 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:48,249 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:48,468 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:50,250 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:52,251 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:53,554 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:54,253 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:56,255 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:56,954 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 12:59:58,255 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 12:59:59,054 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 12:59:59,343 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 12:59:59,343 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 12:59:59,359 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:00:00,257 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:02,258 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:04,167 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:04,260 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:06,261 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:08,263 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:09,692 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:10,264 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:12,265 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:14,267 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:14,343 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:00:14,344 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:00:14,360 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:00:14,780 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:16,268 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:18,270 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:20,268 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:20,271 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:22,273 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:24,274 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:25,398 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:26,276 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:26,960 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:00:28,277 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:29,343 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:00:29,344 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:00:29,360 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:00:30,278 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:30,961 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:32,279 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:34,281 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:36,079 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:36,282 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:38,283 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:40,284 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:41,157 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:42,285 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:44,287 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:44,344 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:00:44,344 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:00:44,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:00:46,288 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:46,664 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:48,289 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:50,291 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:51,700 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:52,292 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:54,293 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:56,295 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:56,958 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:00:56,960 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:00:58,296 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:00:59,360 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:00:59,360 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:00:59,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:01:00,298 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:02,283 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:02,299 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:04,301 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:06,303 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:07,781 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:08,304 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:10,305 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:12,307 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:12,838 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:14,308 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:14,352 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:01:14,353 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:01:14,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:01:16,310 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:18,311 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:18,385 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:20,313 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:22,314 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:24,316 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:24,384 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:26,317 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:26,959 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:01:28,318 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:29,353 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:01:29,353 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:01:29,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:01:29,559 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:30,320 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:32,321 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:34,322 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:34,978 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:36,324 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:38,325 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:40,093 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:40,326 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:42,327 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:44,329 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:44,353 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:01:44,354 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:01:44,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:01:45,634 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:46,330 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:48,331 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:50,333 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:50,742 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:52,334 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:54,335 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:56,279 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:01:56,337 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:56,962 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:01:58,338 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:01:59,353 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:01:59,354 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:01:59,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:02:00,339 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:01,357 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:02,340 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:04,341 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:06,342 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:06,782 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:08,344 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:10,345 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:12,198 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:12,346 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:13,005 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-30 13:02:13,009 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,016 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,016 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,017 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,017 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,018 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,018 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,019 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,019 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:02:13,020 DEBUG   SenderThread:1569808 [sender.py:send():380] send: history
+2023-12-30 13:02:13,020 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: summary_record
+2023-12-30 13:02:13,028 INFO    SenderThread:1569808 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-12-30 13:02:13,347 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_created():271] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json
+2023-12-30 13:02:14,348 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:14,353 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:02:14,358 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:02:14,361 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:02:15,349 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:16,350 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:17,476 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:18,351 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:20,352 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:22,353 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:23,045 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:24,355 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:26,356 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:26,963 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:02:28,110 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:28,357 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:29,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:02:29,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:02:29,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:02:30,359 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:32,360 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:33,647 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:34,361 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:36,362 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:38,364 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:38,751 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:39,364 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/config.yaml
+2023-12-30 13:02:40,365 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:42,366 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:44,352 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:44,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:02:44,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:02:44,363 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:02:44,367 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:46,369 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:48,370 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:49,401 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:50,371 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:52,373 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:54,374 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:54,978 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:02:56,376 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:56,965 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:02:58,378 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:02:59,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:02:59,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:02:59,367 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:03:00,006 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:00,379 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:02,380 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:04,382 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:05,533 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:06,383 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:08,385 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:10,386 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:10,580 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:12,387 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:14,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:03:14,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:03:14,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:03:14,389 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:16,084 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:16,391 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:18,392 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:20,393 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:21,144 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:22,395 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:24,396 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:26,397 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:26,696 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:26,967 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:03:28,398 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:29,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:03:29,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:03:29,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:03:30,400 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:31,804 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:32,401 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:34,402 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:36,404 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:37,298 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:38,405 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:40,407 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:42,376 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:42,408 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:44,354 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:03:44,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:03:44,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:03:44,409 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:46,411 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:48,019 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:48,413 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:50,414 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:52,415 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:53,024 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:54,416 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:56,418 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:56,968 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:03:58,419 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:03:58,525 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:03:59,355 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:03:59,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:03:59,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:04:00,420 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:02,421 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:03,606 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:04,423 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:06,424 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:08,425 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:09,131 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:10,426 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:12,428 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:14,262 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:14,355 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:04:14,355 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:04:14,362 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:04:14,429 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:16,430 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:18,432 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:19,797 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:20,433 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:22,434 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:24,436 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:24,961 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:26,437 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:26,970 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:04:28,438 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:29,355 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:04:29,356 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:04:29,363 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:04:30,440 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:30,617 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:32,441 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:34,443 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:36,444 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:36,534 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:38,445 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:40,447 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:42,448 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:42,524 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:44,355 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:04:44,356 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:04:44,363 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:04:44,449 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:44,559 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: partial_history
+2023-12-30 13:04:44,678 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:04:44,678 DEBUG   SenderThread:1569808 [sender.py:send():380] send: metric
+2023-12-30 13:04:44,679 DEBUG   SenderThread:1569808 [sender.py:send():380] send: history
+2023-12-30 13:04:44,679 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: summary_record
+2023-12-30 13:04:44,690 INFO    SenderThread:1569808 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-12-30 13:04:45,450 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json
+2023-12-30 13:04:46,451 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:47,452 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:47,565 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:48,453 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:48,453 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/config.yaml
+2023-12-30 13:04:50,454 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:52,455 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:53,055 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:54,457 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:56,458 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:56,971 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:04:58,173 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:04:58,459 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:04:59,356 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:04:59,357 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:04:59,363 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:05:00,461 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:02,462 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:03,717 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:04,463 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:06,464 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:08,466 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:08,787 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:10,466 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:12,468 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:14,286 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:14,356 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:05:14,356 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:05:14,363 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:05:14,469 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:16,471 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:18,472 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:19,341 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:20,473 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:22,475 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:24,477 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:24,945 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:26,478 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:26,973 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:05:28,480 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:29,411 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:05:29,412 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:05:29,412 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:05:30,481 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:30,937 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:32,483 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:34,484 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:36,090 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:36,485 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:38,487 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:40,488 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:41,594 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:42,489 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:44,410 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:05:44,410 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:05:44,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:05:44,491 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:46,492 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:46,652 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:48,493 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:50,495 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:52,258 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:52,496 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:54,497 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:56,499 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:56,975 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:05:57,270 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:05:58,500 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:05:59,410 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:05:59,410 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:05:59,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:06:00,501 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:02,502 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:02,786 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:04,504 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:06,505 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:07,802 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:08,506 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:10,508 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:12,509 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:13,356 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:14,410 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:06:14,410 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:06:14,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:06:14,510 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:16,512 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:18,409 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:18,513 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:20,514 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:22,515 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:23,916 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:24,517 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:26,518 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:26,977 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:06:28,520 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:28,931 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:29,410 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:06:29,410 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:06:29,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:06:30,521 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:32,523 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:34,482 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:34,524 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:36,526 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:38,527 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:39,548 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:40,529 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:42,530 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:44,410 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:06:44,410 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:06:44,450 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:06:44,532 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:44,693 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:46,533 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:48,535 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:49,764 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:50,536 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:52,538 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:54,539 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:54,764 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:06:56,540 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:56,979 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:06:58,542 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:06:59,569 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:06:59,571 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:06:59,574 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:06:59,861 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:00,543 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:02,544 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:04,545 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:05,315 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:06,547 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:08,548 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:10,549 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:10,891 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:12,551 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:14,552 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:14,563 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:07:14,563 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:07:14,610 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:07:15,925 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:16,554 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:18,555 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:20,556 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:21,539 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:22,557 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:24,559 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:26,544 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:26,561 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:26,981 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:07:28,563 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:29,559 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:07:29,559 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:07:29,568 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:07:30,564 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:32,086 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:32,565 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:34,567 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:36,568 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:37,095 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:38,570 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:40,571 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:42,572 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:42,621 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:44,559 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-30 13:07:44,559 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: stop_status
+2023-12-30 13:07:44,568 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:07:44,574 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:46,575 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:47,650 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:48,577 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:50,270 DEBUG   SenderThread:1569808 [sender.py:send():380] send: exit
+2023-12-30 13:07:50,270 INFO    SenderThread:1569808 [sender.py:send_exit():585] handling exit code: 255
+2023-12-30 13:07:50,275 INFO    SenderThread:1569808 [sender.py:send_exit():587] handling runtime: 983
+2023-12-30 13:07:50,282 INFO    SenderThread:1569808 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-12-30 13:07:50,282 INFO    SenderThread:1569808 [sender.py:send_exit():593] send defer
+2023-12-30 13:07:50,283 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,283 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 0
+2023-12-30 13:07:50,284 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,284 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-12-30 13:07:50,285 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 1
+2023-12-30 13:07:50,285 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,285 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 1
+2023-12-30 13:07:50,285 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,286 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-12-30 13:07:50,286 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 2
+2023-12-30 13:07:50,286 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,287 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 2
+2023-12-30 13:07:50,287 INFO    HandlerThread:1569808 [system_monitor.py:finish():203] Stopping system monitor
+2023-12-30 13:07:50,287 DEBUG   SystemMonitor:1569808 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-12-30 13:07:50,288 INFO    HandlerThread:1569808 [interfaces.py:finish():202] Joined cpu monitor
+2023-12-30 13:07:50,288 DEBUG   SystemMonitor:1569808 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-12-30 13:07:50,288 INFO    HandlerThread:1569808 [interfaces.py:finish():202] Joined disk monitor
+2023-12-30 13:07:50,579 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:50,579 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json
+2023-12-30 13:07:50,754 INFO    HandlerThread:1569808 [interfaces.py:finish():202] Joined gpu monitor
+2023-12-30 13:07:50,754 INFO    HandlerThread:1569808 [interfaces.py:finish():202] Joined memory monitor
+2023-12-30 13:07:50,754 INFO    HandlerThread:1569808 [interfaces.py:finish():202] Joined network monitor
+2023-12-30 13:07:50,756 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,757 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-12-30 13:07:50,757 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 3
+2023-12-30 13:07:50,757 DEBUG   SenderThread:1569808 [sender.py:send():380] send: stats
+2023-12-30 13:07:50,757 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,758 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 3
+2023-12-30 13:07:50,758 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,758 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-12-30 13:07:50,758 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 4
+2023-12-30 13:07:50,759 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,759 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 4
+2023-12-30 13:07:50,759 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,760 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-12-30 13:07:50,760 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 5
+2023-12-30 13:07:50,760 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,760 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 5
+2023-12-30 13:07:50,760 DEBUG   SenderThread:1569808 [sender.py:send():380] send: summary
+2023-12-30 13:07:50,763 INFO    SenderThread:1569808 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-12-30 13:07:50,763 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,764 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-12-30 13:07:50,764 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 6
+2023-12-30 13:07:50,764 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,764 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 6
+2023-12-30 13:07:50,764 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,765 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-12-30 13:07:50,765 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 7
+2023-12-30 13:07:50,765 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:50,765 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:50,765 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 7
+2023-12-30 13:07:50,766 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:50,766 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-12-30 13:07:51,271 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-30 13:07:51,579 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json
+2023-12-30 13:07:52,580 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:53,117 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 8
+2023-12-30 13:07:53,117 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: poll_exit
+2023-12-30 13:07:53,117 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:53,123 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 8
+2023-12-30 13:07:53,124 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:53,124 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-12-30 13:07:53,125 INFO    SenderThread:1569808 [job_builder.py:build():298] Attempting to build job artifact
+2023-12-30 13:07:53,129 INFO    SenderThread:1569808 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-12-30 13:07:53,147 INFO    SenderThread:1569808 [job_builder.py:build():404] adding wandb-job metadata file
+2023-12-30 13:07:53,152 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 9
+2023-12-30 13:07:53,152 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:53,153 DEBUG   SenderThread:1569808 [sender.py:send():380] send: artifact
+2023-12-30 13:07:53,154 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 9
+2023-12-30 13:07:53,581 INFO    Thread-12 :1569808 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:54,917 INFO    wandb-upload_0:1569808 [upload_job.py:push():89] Uploaded file /home/nlp-04/.local/share/wandb/artifacts/staging/tmp20h26cay
+2023-12-30 13:07:54,936 INFO    wandb-upload_1:1569808 [upload_job.py:push():89] Uploaded file /home/nlp-04/.local/share/wandb/artifacts/staging/tmp0ti75ds5
+2023-12-30 13:07:56,251 INFO    SenderThread:1569808 [sender.py:send_artifact():1458] sent artifact job-https___github.com_kawaiiTaiga_MIDAS.git_test.py - {'id': 'QXJ0aWZhY3Q6Njc3MTIwNjgz', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNjM0MjE5NA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njc3MTE5MTM2', 'versionIndex': 4}}}
+2023-12-30 13:07:56,251 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:56,251 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-12-30 13:07:56,251 INFO    SenderThread:1569808 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-12-30 13:07:56,272 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: keepalive
+2023-12-30 13:07:56,583 INFO    SenderThread:1569808 [dir_watcher.py:finish():388] scan: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files
+2023-12-30 13:07:56,583 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json wandb-summary.json
+2023-12-30 13:07:56,592 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log output.log
+2023-12-30 13:07:56,593 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/requirements.txt requirements.txt
+2023-12-30 13:07:56,599 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/config.yaml config.yaml
+2023-12-30 13:07:56,599 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/conda-environment.yaml conda-environment.yaml
+2023-12-30 13:07:56,603 INFO    SenderThread:1569808 [dir_watcher.py:finish():402] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-metadata.json wandb-metadata.json
+2023-12-30 13:07:56,603 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 10
+2023-12-30 13:07:56,603 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:56,606 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 10
+2023-12-30 13:07:56,608 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:56,608 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-12-30 13:07:56,609 INFO    SenderThread:1569808 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-30 13:07:57,085 INFO    wandb-upload_0:1569808 [upload_job.py:push():131] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/wandb-summary.json
+2023-12-30 13:07:57,480 INFO    wandb-upload_1:1569808 [upload_job.py:push():131] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/output.log
+2023-12-30 13:07:57,525 INFO    wandb-upload_3:1569808 [upload_job.py:push():131] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/config.yaml
+2023-12-30 13:07:57,541 INFO    wandb-upload_4:1569808 [upload_job.py:push():131] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/conda-environment.yaml
+2023-12-30 13:07:57,542 INFO    wandb-upload_2:1569808 [upload_job.py:push():131] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/files/requirements.txt
+2023-12-30 13:07:57,742 INFO    Thread-11 (_thread_body):1569808 [sender.py:transition_state():613] send defer: 11
+2023-12-30 13:07:57,743 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:57,744 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 11
+2023-12-30 13:07:57,745 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:57,745 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-12-30 13:07:57,746 INFO    SenderThread:1569808 [file_pusher.py:join():181] waiting for file pusher
+2023-12-30 13:07:57,746 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 12
+2023-12-30 13:07:57,746 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:57,747 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 12
+2023-12-30 13:07:57,747 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:57,748 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-12-30 13:07:57,748 INFO    SenderThread:1569808 [file_stream.py:finish():595] file stream finish called
+2023-12-30 13:07:57,963 INFO    SenderThread:1569808 [file_stream.py:finish():599] file stream finish is done
+2023-12-30 13:07:57,963 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 13
+2023-12-30 13:07:57,964 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:57,965 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 13
+2023-12-30 13:07:57,965 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:57,966 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-12-30 13:07:57,966 INFO    SenderThread:1569808 [sender.py:transition_state():613] send defer: 14
+2023-12-30 13:07:57,967 DEBUG   SenderThread:1569808 [sender.py:send():380] send: final
+2023-12-30 13:07:57,967 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: defer
+2023-12-30 13:07:57,967 DEBUG   SenderThread:1569808 [sender.py:send():380] send: footer
+2023-12-30 13:07:57,967 INFO    HandlerThread:1569808 [handler.py:handle_request_defer():172] handle defer: 14
+2023-12-30 13:07:57,968 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: defer
+2023-12-30 13:07:57,968 INFO    SenderThread:1569808 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-12-30 13:07:57,969 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-30 13:07:57,969 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: server_info
+2023-12-30 13:07:57,970 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: get_summary
+2023-12-30 13:07:57,970 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: poll_exit
+2023-12-30 13:07:57,971 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: sampled_history
+2023-12-30 13:07:57,972 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: server_info
+2023-12-30 13:07:57,973 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-30 13:07:57,975 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: job_info
+2023-12-30 13:07:58,162 DEBUG   SenderThread:1569808 [sender.py:send_request():407] send_request: job_info
+2023-12-30 13:07:58,163 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: status_report
+2023-12-30 13:07:58,163 INFO    MainThread:1569808 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-12-30 13:07:58,165 INFO    MainThread:1569808 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-12-30 13:07:58,170 INFO    MainThread:1569808 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2023-12-30 13:07:58,171 DEBUG   HandlerThread:1569808 [handler.py:handle_request():146] handle_request: shutdown
+2023-12-30 13:07:58,172 INFO    HandlerThread:1569808 [handler.py:finish():866] shutting down handler
+2023-12-30 13:07:59,163 INFO    SenderThread:1569808 [sender.py:finish():1536] shutting down sender
+2023-12-30 13:07:59,163 INFO    SenderThread:1569808 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-30 13:07:59,163 INFO    SenderThread:1569808 [file_pusher.py:join():181] waiting for file pusher
+2023-12-30 13:07:59,164 INFO    WriterThread:1569808 [datastore.py:close():294] close: /data/2_data_server/nlp-04/lost_technology/wandb/run-20231230_125126-558sv03w/run-558sv03w.wandb

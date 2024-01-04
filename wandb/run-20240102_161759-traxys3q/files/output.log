@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 31, in <module>
+    train_data["label"] = train_data["category"].apply(label_to_idx)
+  File "/home/nlp-04/anaconda3/envs/kkm/lib/python3.10/site-packages/pandas/core/series.py", line 4771, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/nlp-04/anaconda3/envs/kkm/lib/python3.10/site-packages/pandas/core/apply.py", line 1123, in apply
+    return self.apply_standard()
+  File "/home/nlp-04/anaconda3/envs/kkm/lib/python3.10/site-packages/pandas/core/apply.py", line 1174, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas/_libs/lib.pyx", line 2924, in pandas._libs.lib.map_infer
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 28, in label_to_idx
+    return label2idx[label]
+KeyError: 'translate'

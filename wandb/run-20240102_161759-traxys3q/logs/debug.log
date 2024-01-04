@@ -1,0 +1,28 @@
+2024-01-02 16:17:59,832 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Current SDK version is 0.15.4
+2024-01-02 16:17:59,832 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Configure stats pid to 3830484
+2024-01-02 16:17:59,832 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Loading settings from /home/nlp-04/.config/wandb/settings
+2024-01-02 16:17:59,832 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Loading settings from /data/2_data_server/nlp-04/lost_technology/wandb/settings
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'test.py', 'program': '/data/2_data_server/nlp-04/lost_technology/test.py'}
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:_log_setup():507] Logging user logs to /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_161759-traxys3q/logs/debug.log
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:_log_setup():508] Logging internal logs to /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_161759-traxys3q/logs/debug-internal.log
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:init():547] calling init triggers
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:init():596] starting backend
+2024-01-02 16:17:59,833 INFO    MainThread:3830484 [wandb_init.py:init():600] setting up manager
+2024-01-02 16:17:59,835 INFO    MainThread:3830484 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-01-02 16:17:59,838 INFO    MainThread:3830484 [wandb_init.py:init():606] backend started and connected
+2024-01-02 16:17:59,839 INFO    MainThread:3830484 [wandb_init.py:init():703] updated telemetry
+2024-01-02 16:17:59,853 INFO    MainThread:3830484 [wandb_init.py:init():736] communicating run to backend with 60.0 second timeout
+2024-01-02 16:18:00,408 INFO    MainThread:3830484 [wandb_run.py:_on_init():2176] communicating current version
+2024-01-02 16:18:00,470 INFO    MainThread:3830484 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.16.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-01-02 16:18:00,470 INFO    MainThread:3830484 [wandb_init.py:init():787] starting run threads in backend
+2024-01-02 16:18:03,466 INFO    MainThread:3830484 [wandb_run.py:_console_start():2155] atexit reg
+2024-01-02 16:18:03,466 INFO    MainThread:3830484 [wandb_run.py:_redirect():2010] redirect: SettingsConsole.WRAP_RAW
+2024-01-02 16:18:03,466 INFO    MainThread:3830484 [wandb_run.py:_redirect():2075] Wrapping output streams.
+2024-01-02 16:18:03,467 INFO    MainThread:3830484 [wandb_run.py:_redirect():2100] Redirects installed.
+2024-01-02 16:18:03,468 INFO    MainThread:3830484 [wandb_init.py:init():828] run started, returning control to user process
+2024-01-02 16:18:09,972 WARNING MsgRouterThr:3830484 [router.py:message_loop():77] message_loop has been closed

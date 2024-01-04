@@ -1,0 +1,228 @@
+2024-01-02 17:15:15,942 INFO    StreamThr :3890210 [internal.py:wandb_internal():86] W&B internal server running at pid: 3890210, started at: 2024-01-02 17:15:15.939816
+2024-01-02 17:15:15,944 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status
+2024-01-02 17:15:15,946 INFO    WriterThread:3890210 [datastore.py:open_for_write():85] open: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/run-vvilzba2.wandb
+2024-01-02 17:15:15,950 DEBUG   SenderThread:3890210 [sender.py:send():369] send: header
+2024-01-02 17:15:15,952 DEBUG   SenderThread:3890210 [sender.py:send():369] send: run
+2024-01-02 17:15:16,539 INFO    SenderThread:3890210 [dir_watcher.py:__init__():211] watching files in: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files
+2024-01-02 17:15:16,540 INFO    SenderThread:3890210 [sender.py:_start_run_threads():1100] run started: vvilzba2 with start time 1704183315.938251
+2024-01-02 17:15:16,540 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: summary_record
+2024-01-02 17:15:16,545 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: check_version
+2024-01-02 17:15:16,565 INFO    SenderThread:3890210 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-01-02 17:15:16,565 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: check_version
+2024-01-02 17:15:16,631 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: run_start
+2024-01-02 17:15:16,642 DEBUG   HandlerThread:3890210 [system_info.py:__init__():31] System info init
+2024-01-02 17:15:16,642 DEBUG   HandlerThread:3890210 [system_info.py:__init__():46] System info init done
+2024-01-02 17:15:16,642 INFO    HandlerThread:3890210 [system_monitor.py:start():181] Starting system monitor
+2024-01-02 17:15:16,643 INFO    SystemMonitor:3890210 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-01-02 17:15:16,643 INFO    HandlerThread:3890210 [system_monitor.py:probe():201] Collecting system info
+2024-01-02 17:15:16,644 INFO    SystemMonitor:3890210 [interfaces.py:start():190] Started cpu monitoring
+2024-01-02 17:15:16,645 INFO    SystemMonitor:3890210 [interfaces.py:start():190] Started disk monitoring
+2024-01-02 17:15:16,646 INFO    SystemMonitor:3890210 [interfaces.py:start():190] Started gpu monitoring
+2024-01-02 17:15:16,647 INFO    SystemMonitor:3890210 [interfaces.py:start():190] Started memory monitoring
+2024-01-02 17:15:16,648 INFO    SystemMonitor:3890210 [interfaces.py:start():190] Started network monitoring
+2024-01-02 17:15:16,704 DEBUG   HandlerThread:3890210 [system_info.py:probe():195] Probing system
+2024-01-02 17:15:16,708 DEBUG   HandlerThread:3890210 [system_info.py:_probe_git():180] Probing git
+2024-01-02 17:15:16,720 DEBUG   HandlerThread:3890210 [system_info.py:_probe_git():188] Probing git done
+2024-01-02 17:15:16,720 DEBUG   HandlerThread:3890210 [system_info.py:probe():240] Probing system done
+2024-01-02 17:15:16,720 DEBUG   HandlerThread:3890210 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.31', 'python': '3.10.9', 'heartbeatAt': '2024-01-02T08:15:16.704402', 'startedAt': '2024-01-02T08:15:15.884289', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data/2_data_server/nlp-04/lost_technology/test.py', 'codePath': 'test.py', 'git': {'remote': 'https://github.com/kawaiiTaiga/MIDAS.git', 'commit': '11bb36a0dcc850a77235a71212352ee929d8ffdf'}, 'email': 'duke123@outlook.kr', 'root': '/data/2_data_server/nlp-04/lost_technology', 'host': 'DICE-57', 'username': 'nlp-04', 'executable': '/home/nlp-04/anaconda3/envs/kkm/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 1513.5875416666668, 'min': 1500.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}, {'current': 2055.197, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2300.0}], 'disk': {'total': 915.3232879638672, 'used': 491.57272720336914}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.72299575805664}}
+2024-01-02 17:15:16,721 INFO    HandlerThread:3890210 [system_monitor.py:probe():211] Finished collecting system info
+2024-01-02 17:15:16,721 INFO    HandlerThread:3890210 [system_monitor.py:probe():214] Publishing system info
+2024-01-02 17:15:16,721 DEBUG   HandlerThread:3890210 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-01-02 17:15:16,726 DEBUG   HandlerThread:3890210 [system_info.py:_save_pip():67] Saving pip packages done
+2024-01-02 17:15:16,726 DEBUG   HandlerThread:3890210 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-01-02 17:15:17,543 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_created():272] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/conda-environment.yaml
+2024-01-02 17:15:17,544 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_created():272] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/requirements.txt
+2024-01-02 17:15:17,544 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_created():272] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-summary.json
+2024-01-02 17:15:19,553 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/conda-environment.yaml
+2024-01-02 17:15:19,554 DEBUG   HandlerThread:3890210 [system_info.py:_save_conda():86] Saving conda packages done
+2024-01-02 17:15:19,559 INFO    HandlerThread:3890210 [system_monitor.py:probe():216] Finished publishing system info
+2024-01-02 17:15:19,562 DEBUG   SenderThread:3890210 [sender.py:send():369] send: files
+2024-01-02 17:15:19,562 INFO    SenderThread:3890210 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2024-01-02 17:15:19,573 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-02 17:15:19,574 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: stop_status
+2024-01-02 17:15:19,919 DEBUG   SenderThread:3890210 [sender.py:send():369] send: telemetry
+2024-01-02 17:15:20,117 INFO    wandb-upload_0:3890210 [upload_job.py:push():133] Uploaded file /tmp/tmpc5z0kuizwandb/b5jam1qn-wandb-metadata.json
+2024-01-02 17:15:20,555 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_created():272] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-metadata.json
+2024-01-02 17:15:21,920 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:24,560 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_created():272] file/dir created: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:26,562 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:26,940 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:28,572 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:30,582 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:31,612 DEBUG   SenderThread:3890210 [sender.py:send():369] send: config
+2024-01-02 17:15:31,654 DEBUG   SenderThread:3890210 [sender.py:send():369] send: metric
+2024-01-02 17:15:31,654 DEBUG   SenderThread:3890210 [sender.py:send():369] send: telemetry
+2024-01-02 17:15:31,654 DEBUG   SenderThread:3890210 [sender.py:send():369] send: metric
+2024-01-02 17:15:31,654 WARNING SenderThread:3890210 [sender.py:send_metric():1305] Seen metric with glob (shouldn't happen)
+2024-01-02 17:15:32,589 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:32,672 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:33,602 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:34,571 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-02 17:15:34,572 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: stop_status
+2024-01-02 17:15:37,842 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:42,842 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:47,625 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:48,412 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:49,571 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-02 17:15:49,572 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: stop_status
+2024-01-02 17:15:49,637 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:49,638 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/config.yaml
+2024-01-02 17:15:51,647 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:53,657 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:54,679 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:15:55,668 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:57,679 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:59,689 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:15:59,947 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:16:01,699 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:03,710 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:04,576 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-02 17:16:04,577 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: stop_status
+2024-01-02 17:16:05,722 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:05,884 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:16:07,730 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:09,741 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:11,240 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:16:11,242 DEBUG   SenderThread:3890210 [sender.py:send():369] send: exit
+2024-01-02 17:16:11,242 INFO    SenderThread:3890210 [sender.py:send_exit():574] handling exit code: 255
+2024-01-02 17:16:11,242 INFO    SenderThread:3890210 [sender.py:send_exit():576] handling runtime: 54
+2024-01-02 17:16:11,260 INFO    SenderThread:3890210 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-01-02 17:16:11,260 INFO    SenderThread:3890210 [sender.py:send_exit():582] send defer
+2024-01-02 17:16:11,261 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:11,261 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 0
+2024-01-02 17:16:11,261 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:11,261 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 0
+2024-01-02 17:16:11,262 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 1
+2024-01-02 17:16:11,262 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:11,262 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 1
+2024-01-02 17:16:11,262 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:11,262 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 1
+2024-01-02 17:16:11,262 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 2
+2024-01-02 17:16:11,262 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:11,262 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 2
+2024-01-02 17:16:11,262 INFO    HandlerThread:3890210 [system_monitor.py:finish():190] Stopping system monitor
+2024-01-02 17:16:11,263 DEBUG   SystemMonitor:3890210 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-01-02 17:16:11,264 INFO    HandlerThread:3890210 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-02 17:16:11,264 DEBUG   SystemMonitor:3890210 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-01-02 17:16:11,264 INFO    HandlerThread:3890210 [interfaces.py:finish():202] Joined disk monitor
+2024-01-02 17:16:11,265 DEBUG   SystemMonitor:3890210 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-01-02 17:16:11,749 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:11,749 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-summary.json
+2024-01-02 17:16:12,745 INFO    HandlerThread:3890210 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-02 17:16:12,746 INFO    HandlerThread:3890210 [interfaces.py:finish():202] Joined memory monitor
+2024-01-02 17:16:12,746 INFO    HandlerThread:3890210 [interfaces.py:finish():202] Joined network monitor
+2024-01-02 17:16:12,747 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:12,748 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,748 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 2
+2024-01-02 17:16:12,748 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 3
+2024-01-02 17:16:12,748 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:12,749 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 3
+2024-01-02 17:16:12,759 DEBUG   SenderThread:3890210 [sender.py:send():369] send: stats
+2024-01-02 17:16:12,761 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:12,761 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,761 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 3
+2024-01-02 17:16:12,761 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 4
+2024-01-02 17:16:12,762 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:12,762 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 4
+2024-01-02 17:16:12,762 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,762 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 4
+2024-01-02 17:16:12,763 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 5
+2024-01-02 17:16:12,763 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:12,763 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 5
+2024-01-02 17:16:12,763 DEBUG   SenderThread:3890210 [sender.py:send():369] send: summary
+2024-01-02 17:16:12,771 INFO    SenderThread:3890210 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-01-02 17:16:12,772 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,772 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 5
+2024-01-02 17:16:12,772 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 6
+2024-01-02 17:16:12,772 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:12,772 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 6
+2024-01-02 17:16:12,773 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,773 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 6
+2024-01-02 17:16:12,773 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 7
+2024-01-02 17:16:12,773 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: status_report
+2024-01-02 17:16:12,773 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:12,774 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 7
+2024-01-02 17:16:12,774 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:12,774 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 7
+2024-01-02 17:16:13,243 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:13,690 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 8
+2024-01-02 17:16:13,690 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:13,690 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:13,690 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 8
+2024-01-02 17:16:13,691 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:13,691 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 8
+2024-01-02 17:16:13,691 INFO    SenderThread:3890210 [job_builder.py:build():232] Attempting to build job artifact
+2024-01-02 17:16:13,693 INFO    SenderThread:3890210 [job_builder.py:build():256] is repo sourced job
+2024-01-02 17:16:13,699 INFO    SenderThread:3890210 [job_builder.py:build():297] adding wandb-job metadata file
+2024-01-02 17:16:13,713 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 9
+2024-01-02 17:16:13,713 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:13,713 DEBUG   SenderThread:3890210 [sender.py:send():369] send: artifact
+2024-01-02 17:16:13,714 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 9
+2024-01-02 17:16:13,751 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:13,751 INFO    Thread-12 :3890210 [dir_watcher.py:_on_file_modified():289] file/dir modified: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-summary.json
+2024-01-02 17:16:14,244 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:14,742 INFO    SenderThread:3890210 [sender.py:send_artifact():1450] sent artifact job-https___github.com_kawaiiTaiga_MIDAS.git_test.py - {'id': 'QXJ0aWZhY3Q6Njc5NjQ2OTcy', 'digest': '6e04d176bd7da63d321880715387b034', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_kawaiiTaiga_MIDAS.git_test.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_kawaiiTaiga_MIDAS.git_test.py', 'alias': 'v17'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNjM0MjE5NA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njc5NjQ2OTcy', 'versionIndex': 17}}, 'version': 'v17'}
+2024-01-02 17:16:14,742 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:14,742 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 9
+2024-01-02 17:16:14,742 INFO    SenderThread:3890210 [dir_watcher.py:finish():359] shutting down directory watcher
+2024-01-02 17:16:14,753 INFO    SenderThread:3890210 [dir_watcher.py:finish():389] scan: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files
+2024-01-02 17:16:14,753 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-summary.json wandb-summary.json
+2024-01-02 17:16:14,753 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log output.log
+2024-01-02 17:16:14,759 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/requirements.txt requirements.txt
+2024-01-02 17:16:14,759 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/config.yaml config.yaml
+2024-01-02 17:16:14,759 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/conda-environment.yaml conda-environment.yaml
+2024-01-02 17:16:14,760 INFO    SenderThread:3890210 [dir_watcher.py:finish():403] scan save: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-metadata.json wandb-metadata.json
+2024-01-02 17:16:14,760 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 10
+2024-01-02 17:16:14,760 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:14,761 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:14,761 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 10
+2024-01-02 17:16:14,762 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:14,762 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 10
+2024-01-02 17:16:14,762 INFO    SenderThread:3890210 [file_pusher.py:finish():159] shutting down file pusher
+2024-01-02 17:16:15,246 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:15,246 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:15,328 INFO    wandb-upload_1:3890210 [upload_job.py:push():133] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/output.log
+2024-01-02 17:16:15,371 INFO    wandb-upload_0:3890210 [upload_job.py:push():133] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/wandb-summary.json
+2024-01-02 17:16:15,392 INFO    wandb-upload_2:3890210 [upload_job.py:push():133] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/requirements.txt
+2024-01-02 17:16:15,440 INFO    wandb-upload_4:3890210 [upload_job.py:push():133] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/conda-environment.yaml
+2024-01-02 17:16:15,507 INFO    wandb-upload_3:3890210 [upload_job.py:push():133] Uploaded file /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/files/config.yaml
+2024-01-02 17:16:15,708 INFO    Thread-11 (_thread_body):3890210 [sender.py:transition_state():602] send defer: 11
+2024-01-02 17:16:15,708 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:15,708 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 11
+2024-01-02 17:16:15,709 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:15,709 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 11
+2024-01-02 17:16:15,709 INFO    SenderThread:3890210 [file_pusher.py:join():164] waiting for file pusher
+2024-01-02 17:16:15,709 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 12
+2024-01-02 17:16:15,710 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:15,710 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 12
+2024-01-02 17:16:15,710 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:15,710 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 12
+2024-01-02 17:16:15,926 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 13
+2024-01-02 17:16:15,927 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:15,927 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 13
+2024-01-02 17:16:15,927 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:15,927 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 13
+2024-01-02 17:16:15,927 INFO    SenderThread:3890210 [sender.py:transition_state():602] send defer: 14
+2024-01-02 17:16:15,928 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: defer
+2024-01-02 17:16:15,928 INFO    HandlerThread:3890210 [handler.py:handle_request_defer():170] handle defer: 14
+2024-01-02 17:16:15,928 DEBUG   SenderThread:3890210 [sender.py:send():369] send: final
+2024-01-02 17:16:15,928 DEBUG   SenderThread:3890210 [sender.py:send():369] send: footer
+2024-01-02 17:16:15,929 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: defer
+2024-01-02 17:16:15,929 INFO    SenderThread:3890210 [sender.py:send_request_defer():598] handle sender defer: 14
+2024-01-02 17:16:15,930 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:15,930 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:15,931 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-02 17:16:15,931 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: poll_exit
+2024-01-02 17:16:15,932 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: server_info
+2024-01-02 17:16:15,933 DEBUG   SenderThread:3890210 [sender.py:send_request():396] send_request: server_info
+2024-01-02 17:16:15,936 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: get_summary
+2024-01-02 17:16:15,936 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: sampled_history
+2024-01-02 17:16:16,125 INFO    MainThread:3890210 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2024-01-02 17:16:16,125 INFO    MainThread:3890210 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2024-01-02 17:16:16,125 INFO    MainThread:3890210 [wandb_run.py:_footer_sync_info():3426] logging synced files
+2024-01-02 17:16:16,126 DEBUG   HandlerThread:3890210 [handler.py:handle_request():144] handle_request: shutdown
+2024-01-02 17:16:16,126 INFO    HandlerThread:3890210 [handler.py:finish():854] shutting down handler
+2024-01-02 17:16:16,933 INFO    WriterThread:3890210 [datastore.py:close():298] close: /data/2_data_server/nlp-04/lost_technology/wandb/run-20240102_171515-vvilzba2/run-vvilzba2.wandb
+2024-01-02 17:16:17,125 INFO    SenderThread:3890210 [sender.py:finish():1526] shutting down sender
+2024-01-02 17:16:17,125 INFO    SenderThread:3890210 [file_pusher.py:finish():159] shutting down file pusher
+2024-01-02 17:16:17,125 INFO    SenderThread:3890210 [file_pusher.py:join():164] waiting for file pusher

@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 23, in <module>
+    train_data["label"] = train_data["class"].apply(label_to_idx)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/core/series.py", line 4760, in apply
+    ).apply()
+      ^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/core/apply.py", line 1207, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/core/apply.py", line 1287, in apply_standard
+    mapped = obj._map_values(
+             ^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/core/base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/core/algorithms.py", line 1814, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "lib.pyx", line 2917, in pandas._libs.lib.map_infer
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 20, in label_to_idx
+    return categories[label]
+           ~~~~~~~~~~^^^^^^^
+TypeError: list indices must be integers or slices, not str

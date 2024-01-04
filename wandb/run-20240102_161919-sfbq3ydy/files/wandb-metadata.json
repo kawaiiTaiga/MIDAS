@@ -1,0 +1,316 @@
+{
+    "os": "Linux-5.15.0-91-generic-x86_64-with-glibc2.31",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-01-02T07:19:19.878000",
+    "startedAt": "2024-01-02T07:19:19.114547",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/data/2_data_server/nlp-04/lost_technology/test.py",
+    "codePathLocal": "test.py",
+    "codePath": "test.py",
+    "git": {
+        "remote": "https://github.com/kawaiiTaiga/MIDAS.git",
+        "commit": "11bb36a0dcc850a77235a71212352ee929d8ffdf"
+    },
+    "email": "dukes123@outlook.kr",
+    "root": "/data/2_data_server/nlp-04/lost_technology",
+    "host": "DICE-56",
+    "username": "nlp-04",
+    "executable": "/home/nlp-04/anaconda3/envs/heck/bin/python",
+    "cpu_count": 48,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 1.5828125,
+        "min": 1500.0,
+        "max": 2650.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.53,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 2.0,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 2.0,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 1.5,
+            "min": 1500.0,
+            "max": 2650.0
+        },
+        {
+            "current": 2.0,
+            "min": 1500.0,
+            "max": 2650.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1758.8579597473145,
+            "used": 910.68359375
+        }
+    },
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_count": 8,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        }
+    ],
+    "memory": {
+        "total": 251.7404899597168
+    }
+}

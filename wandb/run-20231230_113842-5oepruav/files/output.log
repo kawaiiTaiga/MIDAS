@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 11, in <module>
+    train_data = pd.read_json("/data/2_data_server/nlp-04/lost_technology/data/banking/5shot/combined.json", lines=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/io/json/_json.py", line 804, in read_json
+    return json_reader.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/io/json/_json.py", line 1012, in read
+    obj = self._get_object_parser(self._combine_lines(data_lines))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/io/json/_json.py", line 1040, in _get_object_parser
+    obj = FrameParser(json, **kwargs).parse()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/io/json/_json.py", line 1173, in parse
+    self._parse()
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pandas/io/json/_json.py", line 1366, in _parse
+    ujson_loads(json, precise_float=self.precise_float), dtype=None
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Expected object or value

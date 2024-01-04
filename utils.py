@@ -1,5 +1,6 @@
+
+
 from threading import Thread, Event
-import json
 import os
 from tqdm import tqdm
 import time
@@ -8,37 +9,35 @@ import torch.distributed as dist
 import itertools
 from transformers import AutoModel, AutoTokenizer
 import numpy as np
+import socket
+import multiprocessing as mp
+
+
+# 현재 서버의 호스트 이름을 가져옴
+hostname = socket.gethostname()
+
+"""
+ # Manager 객체 생성
+progress_manager = mp.Manager()
+subprogress_manager = mp.Manager()
+
+# 공유 메모리로 사용할 딕셔너리 생성
+progress_data = progress_manager.dict()
+subprogress_data = subprogress_manager.dict()
 def initialize_progress_data(world_size):
     for i in range(world_size):
-        progress_file = f'cache/progress_{i}.json'
-        if os.path.exists(progress_file):
-            os.remove(progress_file)
-        else:
-            # 파일이 존재하지 않는 경우, 새로운 파일을 생성하고 초기 데이터를 기록
-            with open(progress_file, 'w') as f:
-                json.dump({"progress": 0, "total": 0}, f)
+        progress_data[i] = {"progress": 0, "total": 0, "status": '', "upper": 0, "upper_idx": 0}
+def read_sub_progress_data(rank):
+    return subprogress_data.get(rank)
 
-def read_json_file_for_progress(file_path):
-    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
-        try:
-            with open(file_path, 'r') as file:
-                return json.load(file)
-        except json.JSONDecodeError:
-            # 파일이 비어 있거나 아직 완전히 쓰여지지 않은 상태
-            return None
-    else:
-        # 파일이 존재하지 않거나 비어 있음
-        return None
-def update_progress(rank, current, total):
+def read_progress_data(rank):
+    return progress_data.get(rank)
 
-    # 현재 프로세스의 진행 상황을 파일에 기록
-    with open(f'cache/progress_{rank}.json', 'w') as f:
-        json.dump({"progress": current, "total": total}, f)
-def update_sub_progress(rank, current, total,status):
+def update_progress(rank, current, total, server_name=''):
+    progress_data[rank] = {"progress": current, "total": total}
 
-    # 현재 프로세스의 진행 상황을 파일에 기록
-    with open(f'cache/subprogress_{rank}.json', 'w') as f:
-        json.dump({"progress": current, "total": total,"status" : status}, f)
+def update_sub_progress(rank, current, total, status, upper_level, upper_level_idx):
+    subprogress_data[rank] = {"progress": current, "total": total, "status": status, "upper": upper_level, "upper_idx": upper_level_idx}
 
 def colorize(text, color):
     colors = {
@@ -54,61 +53,50 @@ def colorize(text, color):
     return colors.get(color, "") + text + colors["endc"]
 
 def sub_monitor_progress(world_size, parts):
-    try:
-        bar_colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "white"]
-        progress_bars = []
-        subprogress_bars = []
+    print('d')
+    bar_colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "white"]
+    progress_bars = []
+    subprogress_bars = []
+    # 메인 프로세스 진행 막대 생성
+    for i, part in enumerate(parts):
+        main_bar = tqdm(total=len(part),
+                        desc=colorize(f"Process {i}", bar_colors[i % len(bar_colors)]),
+                        bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]")
+        progress_bars.append(main_bar)
+        # 서브프로세스 진행 막대 생성 (초기 total 값은 나중에 설정)
+        sub_bar = tqdm(total=0,
+                       desc=colorize(f"Subprocess of {i}", "white"),
+                       bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]",
+                       position=len(progress_bars) + i)
+        subprogress_bars.append(sub_bar)
+    completed = [False] * world_size
+    while not all(completed):
+        for i in range(world_size):
+            progress_data = read_progress_data(i)
+            if progress_data is not None:
+                progress_bars[i].n = progress_data["progress"]
+                progress_bars[i].refresh()
+                if progress_data["progress"] + 2 >= len(parts[i]):
+                    completed[i] = True
+            # 서브프로세스 상태 및 상태 문자열 업데이트
+            
+            subprogress_data = read_sub_progress_data(i)
+            if subprogress_data is not None:
 
-        # 메인 프로세스 진행 막대 생성
-        for i, part in enumerate(parts):
-            main_bar = tqdm(total=len(part), 
-                            desc=colorize(f"Process {i}", bar_colors[i % len(bar_colors)]),
-                            bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]")
-            progress_bars.append(main_bar)
-
-            # 서브프로세스 진행 막대 생성 (초기 total 값은 나중에 설정)
-            sub_bar = tqdm(total=0,  
-                           desc=colorize(f"Subprocess of {i}", "white"),
-                           bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}{postfix}]",
-                           position=len(progress_bars) + i)
-            subprogress_bars.append(sub_bar)
-
-        completed = [False] * world_size
-        while not all(completed):
-            for i in range(world_size):
-                progress_file = f'cache/progress_{i}.json'
-                subprogress_file = f'cache/subprogress_{i}.json'
-
-                if os.path.exists(progress_file):
-                    progress_data = read_json_file_for_progress(progress_file)
-                    if progress_data is not None:
-                        progress_bars[i].n = progress_data["progress"]
-                        progress_bars[i].refresh()
-                        if progress_data["progress"]+2 >= len(parts[i]):
-                            completed[i] = True
-
-                # 서브프로세스 상태 및 상태 문자열 업데이트
-                if os.path.exists(subprogress_file):
-                    subprogress_data = read_json_file_for_progress(subprogress_file)
-                    if subprogress_data is not None:
-                        subprogress_bars[i].total = subprogress_data["total"]
-                        subprogress_bars[i].n = subprogress_data["progress"]
-                        subprogress_bars[i].set_postfix_str(subprogress_data["status"])
-                        subprogress_bars[i].refresh()
-                else:
-                    completed[i] = False
-            time.sleep(0.5)
-        for bar in progress_bars:
-            bar.close()
-        for bar in subprogress_bars:
-            bar.close()
-    except Exception as e:
-        print(f"Error in monitor thread: {e}", file=sys.stderr)
-        error_event.set()
-
+                subprogress_postfix = f'{subprogress_data["status"]} : {subprogress_data["upper_idx"]} / {subprogress_data["upper"]}'
+                subprogress_bars[i].total = subprogress_data["total"]
+                subprogress_bars[i].n = subprogress_data["progress"]
+                subprogress_bars[i].set_postfix_str(subprogress_postfix)
+                subprogress_bars[i].refresh()
+            else:
+                completed[i] = False
+        time.sleep(0.5)
+    for bar in progress_bars:
+        bar.close()
+    for bar in subprogress_bars:
+        bar.close()
 
 def monitor_progress(world_size, parts):
-
     try:
         bar_colors = ["red", "green", "yellow", "blue", "magenta", "cyan", "white"]
         progress_bars = [
@@ -120,14 +108,11 @@ def monitor_progress(world_size, parts):
         completed = [False] * world_size
         while not all(completed):
             for i in range(world_size):
-                progress_file = f'cache/progress_{i}.json'
-                if os.path.exists(progress_file):
-                    progress_data = read_json_file_for_progress(progress_file)
-                    if progress_data is None:
-                        continue
+                progress_data = read_progress_data(i)
+                if progress_data is not None:
                     progress_bars[i].n = progress_data["progress"]
                     progress_bars[i].refresh()
-                    if progress_data["progress"]+2 >= len(parts[i]):
+                    if progress_data["progress"] + 2 >= len(parts[i]):
                         completed[i] = True
                 else:
                     completed[i] = False
@@ -135,25 +120,27 @@ def monitor_progress(world_size, parts):
         for bar in progress_bars:
             bar.close()
     except Exception as e:
-        print(f"Error in monitor thread: {e}", file=sys.stderr)
-        error_event.set()
+        print(f"Error in monitor thread: {e}")
     
-def monitor_progress_thread(world_size, parts,sub):
+def monitor_progress_thread(world_size, parts,sub,server=''):
     if sub==False:
         monitor_thread = Thread(target=monitor_progress, args=(world_size, parts))
     else:
         monitor_thread = Thread(target=sub_monitor_progress, args=(world_size, parts))
     monitor_thread.start()
-
+"""
 def json_tuple_change(data):
     new_data = {}
     for item in data:
         for key, value in item.items():
             # 키를 세트로 변환
+            key = key.replace("\n", "")
             key_tuple = sorted(key.strip("[]'").split("' '"))
             key_tuple = tuple(key_tuple)
             new_data[key_tuple] = value
     return new_data
+
+
 class SimilarityChecker:
     def __init__(self, data, device,model_name="sentence-transformers/all-mpnet-base-v2"):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -230,8 +217,10 @@ class SimilarityChecker:
     def find_most_similar_class_by_name(self, new_class_name):
         """새로운 형식의 클래스 이름에 대해 가장 유사한 클래스를 찾습니다."""
         # 새로운 클래스 이름이 이미 존재하는 경우, 기존의 임베딩 사용
+        new_class_name = new_class_name.strip()
         if new_class_name in self.class_embeddings:
             new_class_embedding = self.class_embeddings[new_class_name]
+            return new_class_name
         else:
             # 새로운 클래스 이름에 대한 임베딩 계산
             new_class_embedding = self.get_embedding(new_class_name)

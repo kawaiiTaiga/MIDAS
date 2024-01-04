@@ -1,0 +1,23 @@
+/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/pyarrow/pandas_compat.py:373: FutureWarning: is_sparse is deprecated and will be removed in a future version. Check `isinstance(dtype, pd.SparseDtype)` instead.
+  if _pandas_api.is_sparse(col):
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-large and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+
+
+Map:   0%|                                                                 | 0/3080 [00:00<?, ? examples/s]
+  0%|                                                                             | 0/4000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data/2_data_server/nlp-04/lost_technology/test.py", line 65, in <module>
+    # 훈련 시작
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 1555, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 1837, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 2682, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nlp-04/anaconda3/envs/test/lib/python3.11/site-packages/transformers/trainer.py", line 2724, in compute_loss
+    raise ValueError(
+ValueError: The model did not return a loss from the inputs, only the following keys: logits. For reference, the inputs it received are input_ids,attention_mask.
