@@ -37,32 +37,46 @@ class GenerationModel:
         self.SimilarityChecker = SimilarityChecker(self.original_data,self.device)
         self.similarity_ranking = self.SimilarityChecker.find_top_k_similar_classes(k=configs['CEA']['pair_count'])
         
-    def generation(self,target_class,ideas,description):
+    def generation(self,target_class,ideas,description,sub_bar,i,t):
         
+        subprogress_postfix = f'generation:||{i}/{t}'
+        sub_bar.set_postfix_str(subprogress_postfix)
+        sub_bar.total = len(self.original_data[target_class])
         combined_result = []
         datas = self.original_data[target_class]
+        
         for idx,d in enumerate(datas):
-            for i in ideas:
+            ideas_r = random.sample(ideas,20)
+            for i in ideas_r:
                 
-                instruction = f""""[INST]{target_class} description: {description}\
-a sample data from this class: {d} \
-ideas for mutating this class: {i} 
-Generate three mutated version of the sample data. The enrichment should incorporate the specific ideas provided, adding more depth and diversity to the data, \
-while staying true to the original class description.[/INST] Mutated texts :1."""
+                instruction = f"""[INST]This is sentence from dataset for intent classification.
+Change the query sentence to fit the characteristics presented.
+Give me five revised sentence example.
+Class name : {target_class}
+query sentence : {d}
+characteristics: {i} 
+[/INST] Revised texts :1."""
 
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
                 outputs = self.model.generate(input_ids, max_new_tokens=100,repetition_penalty = configs['CEA']['generation_repetition_penalty'])
                 generated_text = self.tokenizer.decode(outputs[0])
-                result = generated_text.split(' Mutated texts :')[1]
+                result = generated_text.split(' Revised texts ')[1]
                 results = re.split(r'\d+\.', result)
                 results = [item.strip() for item in results if item.strip()]
                 combined_result.extend(results)
             #print(result)
                 combined_result.extend(results)
-            update_sub_progress(rank, idx, len(datas),'generation',1,1)
+                
+                sub_bar.n = idx
+                sub_bar.refresh()
         return combined_result
     
-    def verification(self,candidiate_texts):
+    def verification(self,candidiate_texts,sub_bar,i,t):
+        
+        subprogress_postfix = f'verification:||{i}/{t}'
+        sub_bar.set_postfix_str(subprogress_postfix)
+        sub_bar.total = len(candidiate_texts)
+        
         combined_result = []
         for idx,text in enumerate(candidiate_texts):
             #print(candidiate_texts)
@@ -83,13 +97,20 @@ while staying true to the original class description.[/INST] Mutated texts :1.""
             verification_result = self.SimilarityChecker.find_most_similar_class_by_name(generated_text)
             
             combined_result.append(verification_result)
-            update_sub_progress(rank, idx, len(candidiate_texts),'verification',1,1)
+            
+            sub_bar.n = idx
+            sub_bar.refresh()
+            
         return combined_result
     
-    def mutation(self,candidate_texts,verification_result,target_class):
+    def mutation(self,candidate_texts,verification_result,target_class,sub_bar,i,t):
         combined_result = []
         ct = 0
 
+        subprogress_postfix = f'mutation:||{i}/{t}'
+        sub_bar.set_postfix_str(subprogress_postfix)
+        sub_bar.total = len(candidate_texts)
+        
         for text,pred in zip(candidate_texts,verification_result):
             ct +=1 
             if pred == target_class:
@@ -100,27 +121,35 @@ while staying true to the original class description.[/INST] Mutated texts :1.""
 
                 data_target = "\n".join(f"{idx + 1}. {text}" for idx, text in enumerate(self.original_data[target_class]))
 
-                instruction = f'''[INST]Input text: {text}\
-This sentence currently belongs to the '{pred}'. Transform this sentence into one that would belong to the '{target_class}', taking into consideration the provided key differentiator and sample texts of {target_class}.\
-Key differentiator : {CER}\
-After generating the transformed text, stop generating new text.
-Sample texts of {target_class}:{data_target}[/INST] Transformed text for class {target_class}:"'''
+                instruction = f'''[INST]{target_class} :{self.original_data[target_class]}
+Distinctive Text : {CER}.   
+This is query text which is belong to class {pred}. 
+Query text : '{text}'
+Modify this query text to be suitable for {target_class}.[/INST]Modified text :"'''
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
                 outputs = self.model.generate(input_ids, max_new_tokens=100, repetition_penalty = configs['CEA']['mutation_repetition_penalty'])
                 generated_text = self.tokenizer.decode(outputs[0])
-                generated_text = generated_text.split(f'Transformed text for class {target_class}:')[1]
+                generated_text = generated_text.split(f'Modified text :')[1]
                 generated_text = generated_text.split('"')[1].strip()
                 combined_result.append(generated_text)
-            update_sub_progress(rank, ct, len(candidate_texts),'mutation',1,1)
+
+                sub_bar.n = ct
+                sub_bar.refresh()
 
         return combined_result
 
-    def description_generation(self,target_class):
+    def description_generation(self,target_class, sub_bar,i,t):
         
+        subprogress_postfix = f'desc_gen:||{i}/{t}'
+        sub_bar.set_postfix_str(subprogress_postfix)
+        
+        sub_bar.total = 1
+        sub_bar.n = 0
+        sub_bar.refresh()
         
         data_target = self.original_data[target_class]
         
-        instruction = f"[INST]This is one of the classes in a classification dataset related to banking tasks.\
+        instruction = f"[INST]This is one of the classes in a intent classification dataset about daily life\
 {target_class}: {data_target}\
 Describe this class in one sentence.[/INST] Class description :"
 
@@ -128,110 +157,108 @@ Describe this class in one sentence.[/INST] Class description :"
         outputs = self.model.generate(input_ids, )
         generated_text = self.tokenizer.decode(outputs[0])
         description = generated_text.split('Class description :')[1]
-
+        
         return description
         
 
-    def idea_generation(self,data,description):
+    def idea_generation(self,data,description, sub_bar,i,t):
+        
+        subprogress_postfix = f'idea_gen:||{i}/{t}'
+        sub_bar.set_postfix_str(subprogress_postfix)
+        
+        
+        
         data_target = self.original_data[data]
+        sub_bar.total = len(data_target)
         combined_result = []
         for idx,text in enumerate(data_target):
-            instruction = f"This is a text from a classification dataset related to banking tasks.\
-{data}: {data_target}\
-class_description:{description}\
-Provide 5 ideas to enrich this class further. Numbering the generated text\
-[/INTS] Generated ideas :1."
+            
+
+            
+            instruction = f"""This is sentence from dataset for intent classification, composed of questions from users. Considering the class, suggest five specific ideas that can make the given text more diverse and helpful.\
+The output format should summarize each idea in one sentence; example sentences are not required.
+class name : {data} 
+class_description:{description} 
+Sentence : {text} 
+[/INTS] Ideas : 1."""
+
+
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
             outputs = self.model.generate(input_ids, max_new_tokens=500)
             generated_text = self.tokenizer.decode(outputs[0])
-            generated_text = generated_text.split('Generated ideas :')[1].strip()
+            generated_text = generated_text.split(' Ideas :')[1].strip()
             ideas = re.split(r'\d+\.', generated_text)
             ideas = [item.strip() for item in ideas if item.strip()]
             combined_result.extend(ideas)
-            update_sub_progress(rank, idx, len(data_target),'idea_gen',1,1)
+            
+            sub_bar.n = idx
+            sub_bar.refresh()
         return combined_result
 
 
-    def CEA(self,target_classs):
+    def CEA(self,target_classs,i,t):
        
+        
         sub_bar = tqdm(total=0,
-               desc=f"gpu {rank}",
-               bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining},{postfix}]",
-               position=rank)
+                   desc=f"gpu {rank}",
+                   bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining},{postfix}]",
+                   position=rank)
+ 
+  
+        description = self.description_generation(target_classs,sub_bar,i,t)
 
-        update_sub_progress(rank, 0, 0,'desc_gen',1,1)
-        description = self.description_generation(target_classs)
-
-        ideas = self.idea_generation(target_classs,description)
+        ideas = self.idea_generation(target_classs,description,sub_bar,i,t)
+        
         ideas_save = [{'class' : target_classs, 'description' : description, 'ideas' : ideas}]
         with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/ideas/{target_classs}_{configs["test_name"]}.json', 'w') as f:
             json.dump(ideas_save, f,indent=4)
 
         
-        candidate_texts = self.generation(target_classs,ideas,description)
+        candidate_texts = self.generation(target_classs,ideas,description,sub_bar,i,t)
             
         
-        verification_result = self.verification(candidate_texts)
+        verification_result = self.verification(candidate_texts,sub_bar,i,t)
             
         
-        final_result = self.mutation(candidate_texts,verification_result,target_classs)
+        final_result = self.mutation(candidate_texts,verification_result,target_classs,sub_bar,i,t)
             
         final_result = [{'class' : target_classs, 'text' : text, 'pred' : pred } for text,pred in zip(final_result,verification_result)]
         
-            
-        #save as json file
-        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/SEA/{target_classs}_{configs["test_name"]}.json', 'w') as f:
+
+        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/SEA/3/{target_classs}_{configs["test_name"]}.json', 'w') as f:
             json.dump(final_result, f,indent=4)
         return final_result
 def main():
     
 
-        
     
     model = GenerationModel("meta-llama/Llama-2-13b-chat-hf", rank)
     df = pd.read_csv(f'/data/2_data_server/nlp-04/lost_technology/original_data/{configs["datasets"]}/train_{configs["shot"]}.csv')
     result = df.groupby('category')['text'].apply(list).to_dict()
 
     classes = list(result.keys())
-
-    parts = np.array_split(classes, world_size)
+    
+    classes = np.array_split(classes, 2)
+    parts = np.array_split(classes[1], world_size)
 
     results = []
-    
-    if rank == 0:
-        initialize_progress_data(world_size)
-        # 주 프로세스에서 모니터링 스레드 시작
-        monitor_progress_thread(world_size, parts,True)
 
 
 
     for idx, datas in enumerate(parts):
         if idx == rank:
             for i, data in enumerate(datas):
-                update_progress(rank, i, len(datas))
-                CEA_RESULT = model.CEA(data)
+                CEA_RESULT = model.CEA(data,i,len(datas))
                 #results.extend({str(data): cot_result})
 
                 
-                 
-    with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{rank}.json', 'w') as f:
-        json.dump(results, f,indent=4)
-    
+      
 
     dist.barrier()
 
 
-
-    combined_data = []
-    if rank == 0:
-        for i in range(world_size):
-            with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{i}.json', 'r') as f:
-                data = json.load(f)
-                combined_data.extend(data)
-        with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/combined.json', 'w') as f:
-            json.dump(combined_data, f,indent=4)
 if __name__ == '__main__':
-    dist.init_process_group(backend='nccl',timeout=datetime.timedelta(minutes=30))
+    dist.init_process_group(backend='nccl',timeout=datetime.timedelta(hours=5))
     rank = dist.get_rank()
     world_size = dist.get_world_size()
     main()

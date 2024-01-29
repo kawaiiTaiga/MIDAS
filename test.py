@@ -9,16 +9,22 @@ import torch
 from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer,AutoTokenizer,DataCollatorWithPadding
 from datasets import load_metric
 import numpy as np
-# wandb 초기화
-wandb.init(project="MIDAS")
+import os
 
+#os.environ['visible_cuda_devices'] = '4,5,6,7'
+# wandb 초기화
+
+
+data_name = "/data/2_data_server/nlp-04/lost_technology/data/hwu/10shot/combined.json"
+#train_data = pd.read_csv("/data/2_data_server/nlp-04/lost_technology/original_data/clinc/train_10.csv")
+wandb.init(project="MIDAS",name=data_name)
 # 훈련 데이터와 테스트 데이터 로드
-train_data = pd.read_json("/data/2_data_server/nlp-04/lost_technology/data/banking/5shot/CEA/2/combined.json")
-#train_data = pd.read_csv("/data/2_data_server/nlp-04/lost_technology/original_data/banking/train.csv")
-test_data = pd.read_csv("/data/2_data_server/nlp-04/lost_technology/original_data/banking/test.csv")
+train_data = pd.read_json(data_name)
+
+test_data = pd.read_csv("/data/2_data_server/nlp-04/lost_technology/original_data/hwu/test.csv")
 
 # 카테고리 라벨 로드
-with open("/data/2_data_server/nlp-04/lost_technology/original_data/banking/categories.json") as f:
+with open("/data/2_data_server/nlp-04/lost_technology/original_data/hwu/categories.json") as f:
     categories = json.load(f)
 
 idx2label = {idx:label for idx,label in enumerate(categories)}
@@ -42,7 +48,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model_name = "roberta-large"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(
-            'roberta-large', num_labels=77, id2label=idx2label, label2id=label2idx
+            model_name, num_labels=len(categories), id2label=idx2label, label2id=label2idx
         ).cuda()
 
 # 토크나이징 함수
@@ -85,18 +91,22 @@ def compute_metrics(p: EvalPrediction):
         'total_incorrect': total_incorrect,  # 총 오답 개수
         'confusion error': incorrect_above_threshold,  # 임계값 이상인 오답 개수
         'uncertainty error': incorrect_below_threshold  # 임계값 이하인 오답 개수
+
     }
 # 훈련 인자 설정
 training_args = TrainingArguments(
     output_dir="./results",
-    learning_rate=1e-5,
+    learning_rate=6e-5,
     per_device_train_batch_size=16,
     per_device_eval_batch_size=16,
     max_steps=4000,
+    #num_train_epochs=10,
+    #weight_decay=1e-3,
     label_smoothing_factor=0.1,
     evaluation_strategy="steps",
     eval_steps=0.1, 
-    save_strategy="no",  # 모델 저장을 원하지 않으면 이 옵션 사용
+    save_strategy="steps",  # 모델 저장을 원하지 않으면 이 옵션 사용
+    do_eval=True,
 )
 
 # Trainer 설정
@@ -111,6 +121,7 @@ trainer = Trainer(
 
 # 훈련 시작
 trainer.train()
-
+trainer.evaluate()
+#trainer.save_model("./results/for_compare/clinc5cea")
 # wandb 종료
 wandb.finish()

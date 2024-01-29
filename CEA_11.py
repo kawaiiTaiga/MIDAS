@@ -54,8 +54,8 @@ class GenerationModel:
             instruction = f"""[INST]{target_class} : {data_target}
 {ambigious_class} : {data_ambigious}
 Distinctive Text : {CER}
-This is intent classification dataset about daily life. Based on the provided texts for each classes and the distinctive text highlighting their differences, generate five new texts that emphasize the unique characteristics of class {target_class}. 
-Number each text generation, and after completing all, append "[END]".[/INST] Generated texts : 1."""
+This is classification dataset about question type. Based on the provided texts for each classes and the distinctive text highlighting their differences, generate five new texts that emphasize the unique characteristics of class {target_class}. 
+Generate texts for fit in {target_class} class. Number each text generation, and after completing all, append "[END]".[/INST] Generated texts : 1."""
 
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
             outputs = self.model.generate(input_ids, repetition_penalty = configs['CEA']['generation_repetition_penalty'] )
@@ -174,7 +174,7 @@ Modify this query text to be suitable for {target_class}.
             combined_data.extend(final_result)
             
         #save as json file
-        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/CEA/3/{data}_{configs["test_name"]}.json', 'w') as f:
+        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/CEA/2/{data}_{configs["test_name"]}.json', 'w') as f:
             json.dump(combined_data, f,indent=4)
         return final_result
 def main():

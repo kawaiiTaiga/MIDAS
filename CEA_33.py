@@ -54,13 +54,14 @@ class GenerationModel:
             instruction = f"""[INST]{target_class} : {data_target}
 {ambigious_class} : {data_ambigious}
 Distinctive Text : {CER}
-This is intent classification dataset about daily life. Based on the provided texts for each classes and the distinctive text highlighting their differences, generate five new texts that emphasize the unique characteristics of class {target_class}. 
-Number each text generation, and after completing all, append "[END]".[/INST] Generated texts : 1."""
+This is part of intent classification about banking. Based on the provided texts for each class and the distinctive text highlighting their differences, generate five new texts that emphasize the unique characteristics of class {target_class}. This new text should help a classification model better distinguish between the two classes.
+After making the new texts, number them sequentially and conclude the list with [END].[/INST]
+New text for {target_class}: 1."""
 
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
             outputs = self.model.generate(input_ids, repetition_penalty = configs['CEA']['generation_repetition_penalty'] )
             generated_text = self.tokenizer.decode(outputs[0])
-            result = generated_text.split(f'Generated texts : ')[1]
+            result = generated_text.split(f'New text for {target_class}:')[1]
             if '[END]' in result:
                 result = result.split('[END]')[0]
             candidiate_texts = re.split(r'\d+\.', result)
@@ -86,9 +87,9 @@ Number each text generation, and after completing all, append "[END]".[/INST] Ge
      
             instruction = ""
             for similar_text in similar_texts:
-                instruction += f"Text : {similar_text[0]} Class : {similar_text[1]}\n"
+                instruction += f"text : {similar_text[0]} class : {similar_text[1]}\n"
             
-            instruction += f"Text : {text} Class :"
+            instruction += f"text : {text} class :"
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
             
             outputs = self.model.generate(input_ids,max_new_tokens=15)
@@ -128,12 +129,12 @@ Number each text generation, and after completing all, append "[END]".[/INST] Ge
 Distinctive Text : {CER}.   
 This is query text which is belong to class {pred}. 
 Query text : '{text}'
-Modify this query text to be suitable for {target_class}.
-[/INST]Modified text :"'''
+Mutate this Query text to proper for class {target_class}.
+[/INST]Changed text :"'''
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
                 outputs = self.model.generate(input_ids, max_new_tokens=100, repetition_penalty = configs['CEA']['mutation_repetition_penalty'])
                 generated_text = self.tokenizer.decode(outputs[0])
-                generated_text = generated_text.split(f'Modified text :')[1]
+                generated_text = generated_text.split(f'Changed text :')[1]
                 generated_text = generated_text.split('"')[1].strip()
                 combined_result.append(generated_text)
             
@@ -158,7 +159,7 @@ Modify this query text to be suitable for {target_class}.
         subprogress_bars = sub_bar
         
         
-        for idx,ambigious_class in enumerate(ambigious_classes):
+        for idx,ambigious_class in tqdm(enumerate(ambigious_classes)):
 
             total_length = len(ambigious_classes)
 
@@ -174,7 +175,7 @@ Modify this query text to be suitable for {target_class}.
             combined_data.extend(final_result)
             
         #save as json file
-        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/CEA/3/{data}_{configs["test_name"]}.json', 'w') as f:
+        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/CEA/1/{data}_{configs["test_name"]}.json', 'w') as f:
             json.dump(combined_data, f,indent=4)
         return final_result
 def main():
@@ -186,7 +187,13 @@ def main():
     result = df.groupby('category')['text'].apply(list).to_dict()
 
     classes = list(result.keys())
-    
+    classes = ['exchange_rate',
+ 'supported_cards_and_currencies',
+ 'get_physical_card',
+ 'direct_debit_payment_not_recognised',
+ 'declined_transfer',
+ 'terminate_account',
+ 'top_up_by_cash_or_cheque']
     #classes = np.array_split(classes,3)
     parts = np.array_split(classes, world_size)
 

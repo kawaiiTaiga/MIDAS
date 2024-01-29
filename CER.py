@@ -38,12 +38,21 @@ class GenerationModel:
         class_b = data[1]
         data_a = self.original_data[class_a]
         data_b = self.original_data[class_b]
-
-        instruction = f"[INST]This is part of dataset for intent classfication for banking data.\
+        
+        #BANKING
+  
+        instruction = f"[INST]This is part of dataset for intent classfication for intent classification.\
             {class_a} : {data_a}\
             {class_b} : {data_b}\
             Tell me the main difference between {class_a} and {class_b} in one sentence.[/INST] The main difference"
-
+    
+        """
+        #TREC
+        instruction = f"[INST]This is part of dataset for classfication about question type classification. Each class have diffent subject.Class name is one word summurize of the topic.\
+            {class_a} : {data_a}\
+            {class_b} : {data_b}\
+            Tell me the main difference between {class_a} and {class_b} in one sentence. Reference class name.[/INST] The main difference"
+        """
         input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
         outputs = self.model.generate(input_ids, )
         generated_text = self.tokenizer.decode(outputs[0])

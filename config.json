@@ -1,18 +1,14 @@
 {
-    "datasets" : "banking",
-    "shot" : "5",
-    "test_name" : "test_1",
-    "server_name" : "57",
-    "CER": {
-      
-    },
+    "datasets" : "hwu",
+    "shot" : "10",
+    "test_name" : "_1",
     "CEA": {
       "pair_count": 5,
-      "sample_count" : 4,
-      "generation_repetition_penalty" : 1.2,
+      "sample_count" : 8,
+      "generation_repetition_penalty" : 1.15,
       "mutation_repetition_penalty" : 1.15,
       "generation_count" : 10,
-      "verification_count" : 40
+      "verification_count" : 20
     }
   }
   

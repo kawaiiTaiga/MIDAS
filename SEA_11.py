@@ -44,19 +44,22 @@ class GenerationModel:
         sub_bar.total = len(self.original_data[target_class])
         combined_result = []
         datas = self.original_data[target_class]
+        
         for idx,d in enumerate(datas):
-            for i in ideas:
+            ideas_r = random.sample(ideas,10)
+            for i in ideas_r:
                 
-                instruction = f""""[INST]{target_class} description: {description}
-Input text: {d} 
-Idea for modify input text: {i} 
-Generate three modified version of the sample text. The modification should incorporate the specific ideas provided, adding more depth and diversity to the data, \
-while staying true to the original class description.[/INST] Modified texts :1."""
+                instruction = f"""[INST]This is sentence from dataset about question type classification.
+Reference the given sentence and generate new data for {target_class} to fit the idea presented. Give me five new texts.
+Class name : {target_class}
+sentence : {d}
+idea : {i} 
+[/INST] Generated texts :1."""
 
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
                 outputs = self.model.generate(input_ids, max_new_tokens=100,repetition_penalty = configs['CEA']['generation_repetition_penalty'])
                 generated_text = self.tokenizer.decode(outputs[0])
-                result = generated_text.split(' Modified texts :')[1]
+                result = generated_text.split(' Generated texts :')[1]
                 results = re.split(r'\d+\.', result)
                 results = [item.strip() for item in results if item.strip()]
                 combined_result.extend(results)
@@ -117,16 +120,15 @@ while staying true to the original class description.[/INST] Modified texts :1."
 
                 data_target = "\n".join(f"{idx + 1}. {text}" for idx, text in enumerate(self.original_data[target_class]))
 
-                instruction = f'''[INST][INST]{target_class} :{self.original_data[target_class]}
+                instruction = f'''[INST]{target_class} :{self.original_data[target_class]}
 Distinctive Text : {CER}.   
 This is query text which is belong to class {pred}. 
 Query text : '{text}'
-Mutate this Query text to proper for class {target_class}.
-[/INST]Changed text :"'''
+Modify this query text to be suitable for {target_class}.[/INST]Modified text :"'''
                 input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
                 outputs = self.model.generate(input_ids, max_new_tokens=100, repetition_penalty = configs['CEA']['mutation_repetition_penalty'])
                 generated_text = self.tokenizer.decode(outputs[0])
-                generated_text = generated_text.split(f'Changed text :')[1]
+                generated_text = generated_text.split(f'Modified text :')[1]
                 generated_text = generated_text.split('"')[1].strip()
                 combined_result.append(generated_text)
 
@@ -146,7 +148,7 @@ Mutate this Query text to proper for class {target_class}.
         
         data_target = self.original_data[target_class]
         
-        instruction = f"[INST]This is one of the classes in a classification dataset related to banking tasks.\
+        instruction = f"[INST]This is one of the classes in a classification dataset about question type.\
 {target_class}: {data_target}\
 Describe this class in one sentence.[/INST] Class description :"
 
@@ -169,15 +171,19 @@ Describe this class in one sentence.[/INST] Class description :"
         sub_bar.total = len(data_target)
         combined_result = []
         for idx,text in enumerate(data_target):
-            instruction = f"This is a text from a classification dataset related to banking tasks.\
-{data}: {text}\
-class_description:{description}\
-Provide 5 ideas to enrich this class further. Numbering the generated text\
-[/INTS] Generated ideas :1."
+            
+
+            instruction = f"""This is sentence from dataset for question type classification. Considering the class, suggest five ideas that can make the given class more diverse.\
+The output format should summarize each idea in one sentence; example sentences are not required.
+class name : {data}
+class_description : {description} 
+Sentence : {text} 
+[/INTS] Ideas : 1."""
+
             input_ids = self.tokenizer(instruction, return_tensors="pt").input_ids.to(self.device)
             outputs = self.model.generate(input_ids, max_new_tokens=500)
             generated_text = self.tokenizer.decode(outputs[0])
-            generated_text = generated_text.split('Generated ideas :')[1].strip()
+            generated_text = generated_text.split(' Ideas :')[1].strip()
             ideas = re.split(r'\d+\.', generated_text)
             ideas = [item.strip() for item in ideas if item.strip()]
             combined_result.extend(ideas)
@@ -216,7 +222,7 @@ Provide 5 ideas to enrich this class further. Numbering the generated text\
         final_result = [{'class' : target_classs, 'text' : text, 'pred' : pred } for text,pred in zip(final_result,verification_result)]
         
 
-        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/SEA/{target_classs}_{configs["test_name"]}.json', 'w') as f:
+        with open(f'data/{configs["datasets"]}/{configs["shot"]}shot/SEA/2/{target_classs}_{configs["test_name"]}.json', 'w') as f:
             json.dump(final_result, f,indent=4)
         return final_result
 def main():
@@ -228,7 +234,8 @@ def main():
     result = df.groupby('category')['text'].apply(list).to_dict()
 
     classes = list(result.keys())
-
+    
+    #classes = np.array_split(classes, 2)
     parts = np.array_split(classes, world_size)
 
     results = []
@@ -242,23 +249,11 @@ def main():
                 #results.extend({str(data): cot_result})
 
                 
-                 
-    with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{rank}.json', 'w') as f:
-        json.dump(results, f,indent=4)
-    
+      
 
     dist.barrier()
 
 
-
-    combined_data = []
-    if rank == 0:
-        for i in range(world_size):
-            with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/data_{i}.json', 'r') as f:
-                data = json.load(f)
-                combined_data.extend(data)
-        with open(f'cot/{configs["datasets"]}/{configs["shot"]}shot/combined.json', 'w') as f:
-            json.dump(combined_data, f,indent=4)
 if __name__ == '__main__':
     dist.init_process_group(backend='nccl',timeout=datetime.timedelta(hours=5))
     rank = dist.get_rank()
